@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Belleza",
+        "tipoProducto": "Espuma",
+        "tipoAroma": "Floral",
+        "descripcion": "Magnolias, gardenias, madreselva y vainilla.",
+        "publicado": 1
+    },
+    {
+        "nombre": "Cable a Tierra",
+        "tipoProducto": "Espuma",
+        "tipoAroma": "Floral",
+        "descripcion": "Flor de tilo y notas verdes",
+        "publicado": 1
+    },
+    {
+        "nombre": "Mar de Flores",
+        "tipoProducto": "Espuma",
+        "tipoAroma": "Floral",
+        "descripcion": "Combinaciòn de flores blancas",
+        "publicado": 1
+    },
+    {
+        "nombre": "Red Berries",
+        "tipoProducto": "Espuma",
+        "tipoAroma": "Frutal",
+        "descripcion": "Frutos rojos",
+        "publicado": 1
+    }
+]

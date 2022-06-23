@@ -1,0 +1,500 @@
+:root{
+    --nude:#F8F4F0;
+    --rosa:#FAE1DD;
+    --violeta:#DCD8E0;
+    --azul:#D9E3EA;
+    --amarillo:#F4F4CB;
+    --naranja:#F3DCC6;
+    --blancoTrans:#FAF5F0ee;
+    --marron:#BAA593;
+    --negro:#3E3E3C;
+    --sombraBasica:5px 5px 10px #777;
+    --joseSans: "Josefin Sans";
+    --joseSlab: "Josefin Slab";
+    --belieFont: "Al Bizantheum"
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    color: var(--negro);
+    font-size: 62.5%;
+}
+body{
+    font-family: var(--joseSans);
+    font-size: 1.6rem;
+    
+}
+h1{
+    font-size: 3.2rem;
+}
+section{
+    margin-top: 3rem;
+}
+hr{
+    border:none;
+    border-bottom: solid 3px;
+    border-color:unset;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+/*Anchos y Altos*/
+
+.w30{
+    width: 30%;
+}
+.w50{
+    width: 50%;
+}
+.w80{
+    width: 80%;
+}
+.w90{
+    width: 90%;
+}
+.w100{
+    width: auto;
+}
+.vh100{
+    height: 100vh;
+}
+.h10rem{
+    height: 10rem;
+}
+.h3rem{
+    height: 3rem;
+}
+
+/*Margin y Padding*/
+.mb4{
+    margin-bottom: 4rem;
+}
+
+/* Flex */
+
+.space_between{
+    justify-content: space-between;
+}
+.space_evenly{
+    justify-content: space-evenly;
+}
+.space_around{
+    justify-content: space-around;
+}
+.space_center{
+    justify-content: center;
+}
+
+/*Textos*/
+.centroT{
+    text-align: center;
+}
+
+/*Colores*/
+
+.nude{
+    color: var(--nude);
+}
+
+/*Backgrounds*/
+.bg_nude{
+    background-color: var(--nude);
+}
+.bg_rosa{
+    background-color: var(--rosa);
+}
+.bg_amarillo{
+    background-color: var(--amarillo);
+}
+.bg_violeta{
+    background-color: var(--violeta);
+}
+.bg_naranja{
+    background-color: var(--naranja);
+}
+.bg_azul{
+    background-color: var(--azul);
+}
+.brd_rosa{
+    border-color: var(--rosa);
+}
+.brd_violeta{
+    border-color: var(--violeta);
+}
+
+/* Background Blobs*/
+.bg_blob_violeta{
+    background-image: url(../img/bgBlobVioleta.svg);
+    background-size:cover;
+}
+.bg_blob_rosa{
+    background-image: url(../img/bgBlobRosa.svg);
+    background-size:cover;
+}
+.bg_blob_amarillo{
+    background-image: url(../img/bgBlobAmarillo.svg);
+    background-size:cover;
+}
+.bg_blob_azul{
+    background-image: url(../img/bgBlobAzul.svg);
+    background-size:cover;
+}
+
+
+/*Header*/
+header{
+    width: auto;
+    height: 100vh;
+}
+nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 3.5em;
+    background-image: linear-gradient(90deg,var(--nude) 30%,#fff 200%);
+}
+nav h1{
+    margin: 0 0 0 5%;
+    font-family: var(--belieFont);
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: inherit;
+}
+
+.links{
+    list-style-type: none;
+    display: flex;
+    margin: 0 5% 0 0;
+}
+.links li{
+    
+    padding: 0 1em;
+}
+
+.header_banner{
+    width: auto;
+    height: calc(100vh - 56px);
+    
+}
+
+.header_banner video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.header_banner img{
+    max-width: 100vw;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    
+}
+.header_banner_textos{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: fit-content;
+    background-color: var(--blancoTrans);
+    padding: 3rem;
+    
+}
+.header_banner_textos h1{
+    font-size: 6rem;
+    text-align: center;
+}
+
+.header_banner_textos p{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 3%;
+    line-height: 4.5rem;
+    
+}
+.highlight{
+    background-color: #BAA593;
+    padding: 1rem 0.5rem 0rem 0.5rem;
+    color: white;
+    font-size: calc(1em * 1.2);
+    
+}
+
+
+/*Seccionado*/
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+.section_bar{
+    width: 100%;
+    margin: 2rem auto 0 auto;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 6rem;    
+    padding: 2rem 0 4rem 0;
+}
+
+
+/*Renovacion*/
+/* .renovation_textos{
+    padding: 2rem;
+    position: relative;
+}
+
+.renovation_textos::before{
+    position: absolute;
+    transform: rotate(175deg);
+    background-color: var(--marron);
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 110%;
+    content: " ";
+    z-index: -1;
+}
+.renovation_textos div{
+    position: absolute;
+    top:-7%;
+    left: 40%;
+    background-color: var(--naranja);
+    width: 25%;
+    height: 4rem;
+}
+.renovation_textos h1{
+    padding: 2rem 0.5rem;
+    font-size: 4rem;
+}
+.renovation_textos p{
+    font-size: 1.5em;
+    padding: 0.5rem;
+}
+.renovation_img{
+    max-width: 80%;
+    height: 5em;
+    object-fit: cover;
+    
+} */
+
+
+
+/*Card Categorias*/
+
+
+.cardCat{
+    width: 320px;
+    height: 400px;
+    background-size: cover;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    margin: 0 1rem;
+    
+}
+.cardCat_header{
+    background-color: var(--marron);
+    border-radius: 30px 30px 0 0;;
+    overflow: hidden;
+    display: flex;
+}
+.cardCat_header_img{
+    width: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.cardCat_header_img img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.cardCat_header_info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardCat_header_info div{
+   padding: 1.5em;
+}
+.cardCat_header_info div p{
+    margin-top: 1em;
+    color: var(--nude);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.cardCat_header_info a{
+    background-color: var(--naranja);
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+    padding: 1.7rem;
+    margin: 1rem;
+    text-align: center;
+    box-shadow: 1px 3px 5px #aaa;
+}
+
+/*Catalogo*/
+
+.catalogo_textos{
+    
+    margin: 4rem auto 3rem auto;
+    padding: 4rem 2rem;
+}
+
+.catalogo_textos h1{
+    padding: 2Rem;
+    font-size: 6rem;
+    text-align: center;
+}
+.catalogo_textos p{
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/* CardList = Usada en Textil y Difu */
+
+.cardList{
+
+    width: 360px;
+    margin: 0 1rem 2rem 1rem ;
+    box-shadow: var(--sombraBasica);
+    position: relative;
+    background-image:linear-gradient(90deg,var(--nude) 30%,#fff 120%);
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.proximamente::before{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/Proximamente.jpg');
+    background-size: cover;
+    clip-path: polygon(0 30%, 100% 29%, 100% 100%, 0% 100%);
+    content: "";
+    transition: clip-path 1s ease-in-out;
+}
+
+.proximamente:hover::before{
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.cardList_header{
+    width: 100%;
+    height: 1.5rem;
+}
+
+.cardList_body{
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem; 
+}
+.cardList_body_imagen{
+    width: 35%;
+    height: 35%;
+    padding: 0.5rem;
+    margin: 0 auto;  
+}
+.cardList_body_imagen img{
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%; 
+}
+.cardList_body h1{
+    font-family: var(--joseSlab);
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    
+}
+.cardList_body p{
+   padding: 0 0.5rem;
+   font-size: 2rem;
+}
+.cardList_body h3{
+    display: block;
+    margin: 1rem auto 0  auto;
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 60%;
+    color: var(--marron);
+    border-top: solid 2px var(--naranja); 
+ }
+.cardList_footer{
+    height: 1rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+
+/* CardShort = Usada en Linea Baño y Velas */ 
+
+.cardShort{
+    background-image:linear-gradient(90deg,var(--nude) 30%,#fff 120%);
+    width: 360px;
+    border-radius: 5%;
+    box-shadow: var(--sombraBasica);
+    position: relative;
+}
+.cardShort_header{
+    margin: 4rem 6rem;
+}
+.cardShort_header img{
+    width: 100%;
+    max-height: 5rem;
+    object-fit: cover;
+}
+.cardShort_body{
+    padding: 3rem 3rem;
+}
+.cardShort_body h1{
+    margin-left: 2rem;
+}
+.cardShort_body p{
+    padding: 0 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+
+  h1{
+    font-size: 2.1rem;
+  }
+  body{
+    font-size: 1.6rem;
+  }
+  .header_banner_textos{
+    top: 20%;
+    left: 3%;
+    margin-right: 7%;
+  }
+
+  .header_banner img{
+    display: block;
+  }
+  .header_banner video{
+    display: none;
+  }
+
+}
+
+

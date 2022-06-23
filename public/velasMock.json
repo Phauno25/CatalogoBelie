@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "nombre": "Frutos Secos",
+        "tipoProducto": "Vela",
+        "tipoAroma": "Gourmand",
+        "descripcion": "Almendras, castañas y avellanas combinadas con base dulce.",
+        "publicado": 1
+    },
+    {
+        "id": 2,
+        "nombre": "Frambuesa Melon",
+        "tipoProducto": "Vela",
+        "tipoAroma": "Frutal",
+        "descripcion": "Frutas tropicales dulces y frescas combinadas.",
+        "publicado": 1
+    },
+    {
+        "id": 3,
+        "nombre": "Limón Caramelo",
+        "tipoProducto": "Vela",
+        "tipoAroma": "Gourmand",
+        "descripcion": "Cítrico combinado con una base acaramelada dulce.",
+        "publicado": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Coco",
+        "tipoProducto": "Vela",
+        "tipoAroma": "Frutal",
+        "descripcion": "Todo el aroma de la clásica fruta tropical contenido en una vela.",
+        "publicado": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Lavanda Portuguesa",
+        "tipoProducto": "Vela",
+        "tipoAroma": "Herbal",
+        "descripcion": "Fresco, suave y relajante.",
+        "publicado": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Poema",
+        "tipoProducto": "Vela",
+        "tipoAroma": "Floral",
+        "descripcion": "Floral herbal alheidico.",
+        "publicado": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Pop Corn",
+        "tipoProducto": "Vela",
+        "tipoAroma": "Gourmand",
+        "descripcion": "Notas avainilladas y acarameladas.",
+        "publicado": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Nag Champa",
+        "tipoProducto": "Vela",
+        "tipoAroma": "Oriental",
+        "descripcion": "La flor de champac combinada con especias de oriente.",
+        "publicado": 1
+    }
+]

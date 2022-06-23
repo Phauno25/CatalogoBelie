@@ -1,0 +1,69 @@
+{
+	"montoTotal": 5530,
+	"actas": [
+		{
+			"numeroActa": "I00797919",
+			"fechaActa": "2018-07-05 17:55",
+			"tipoActa": "T: Acta de Transito",
+			"montoActa": "1785",
+			"estadoReducidoActa": "Pago Voluntario",
+			"fechaVencimiento": "2022-07-21",
+			"infracciones": {
+				"infraccion": {
+					"@attributes": {
+						"infraccion": "6900",
+						"desc": "Estac. lugar prohib./forma indebida/antirreglamentaria",
+						"lugar": "CERRITO 1600",
+						"descuenta_puntos": "0",
+						"recupera_puntos": "0",
+						"mensaje01": "0"
+					}
+				}
+			}
+		},
+		{
+			"numeroActa": "I03044617",
+			"fechaActa": "2021-03-29 15:04",
+			"tipoActa": "T: Acta de Transito",
+			"montoActa": "2140",
+			"estadoReducidoActa": "Pago Voluntario",
+			"fechaVencimiento": "2022-07-21",
+			"infracciones": {
+				"infraccion": {
+					"@attributes": {
+						"infraccion": "6130",
+						"desc": "Conducir sin anteojos o lentes contacto segun Licencia",
+						"lugar": "CALLAO AV. 120",
+						"descuenta_puntos": "0",
+						"recupera_puntos": "0",
+						"mensaje01": "0"
+					}
+				}
+			}
+		},
+		{
+			"numeroActa": "Q32434383",
+			"fechaActa": "2022-01-18 13:20",
+			"tipoActa": "T: Acta de Transito",
+			"montoActa": "1605",
+			"estadoReducidoActa": "Pago Voluntario",
+			"fechaVencimiento": "2022-07-21",
+			"infracciones": {
+				"infraccion": {
+					"@attributes": {
+						"infraccion": "6535",
+						"desc": "Exceso de velocidad de 10% a 30% ms de la velocidad permitida",
+						"lugar": "Rivadavia 4500",
+						"descuenta_puntos": "0",
+						"recupera_puntos": "0",
+						"mensaje01": "0"
+					}
+				}
+			}
+		}
+	],
+	"opcionMedioPago": "ELECTRONICO",
+	"dominio": "ABC123",
+	"tipoDocumentoReducido": null,
+	"numeroDocumento": null
+}
