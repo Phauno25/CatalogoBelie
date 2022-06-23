@@ -1,23 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Card(props) {
 
-    const {nombre, descripcion, tipoAroma, color, publicado} = props;
+    const { nombre, descripcion, tipoAroma, color, publicado, imagen, editar } = props;
+
 
     return (
-        <div className={`cardList ${publicado ? "" : "proximamente"}`}>
-            <div class={`cardList_header ${color}`}> </div>
-            <div class="cardList_body">
-                <div class="cardList_body_imagen">
-                    <img src="" alt="" />
+        <div className={`cardList ${publicado == 1 ? "" : "proximamente"}`}>
+            <div className={`cardList_header ${color}`}> </div>
+            <div className="cardList_body">
+                <div className="cardList_body_imagen">
+                    <img src={imagen} alt={tipoAroma} />
                 </div>
-                <h1>{nombre}</h1>
-                <p class="centroT">
-                    {descripcion}
-                </p>
-                <h3 class="centroT">{tipoAroma}</h3>
+                <div className="cardList_body_textos">
+                    <h1 className="centroT">{nombre}</h1>
+                    <p className="centroT">
+                        {descripcion}
+                    </p>
+                </div>
+                <h3 className="centroT">{tipoAroma}</h3>
+                {editar ? <a href="https://google.com.ar" className='cardEdit'><i class="fa fa-pencil fa-4x"></i></a> : ""}
             </div>
-            <div class={`cardList_footer ${color}`}></div>
+            <div className={`cardList_footer ${color}`}></div>
         </div>
     )
 }

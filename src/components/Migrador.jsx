@@ -8,7 +8,7 @@ function Migrador() {
         let listaprodus = [];
         fetch('/perfuminasMock.json')
             .then(data => data.json())
-            .then(data => { listaprodus = data;})
+            .then(data => { listaprodus = data; })
             .then(() => {
                 listaprodus.forEach(item => {
                     console.log(item);
@@ -30,7 +30,7 @@ function Migrador() {
         let listaprodus = [];
         fetch('/difusoresMock.json')
             .then(data => data.json())
-            .then(data => { listaprodus = data;})
+            .then(data => { listaprodus = data; })
             .then(() => {
                 listaprodus.forEach(item => {
                     console.log(item);
@@ -52,7 +52,7 @@ function Migrador() {
         let listaprodus = [];
         fetch('/velasMock.json')
             .then(data => data.json())
-            .then(data => { listaprodus = data;})
+            .then(data => { listaprodus = data; })
             .then(() => {
                 listaprodus.forEach(item => {
                     console.log(item);
@@ -74,7 +74,7 @@ function Migrador() {
         let listaprodus = [];
         fetch('/espumaMock.json')
             .then(data => data.json())
-            .then(data => { listaprodus = data;})
+            .then(data => { listaprodus = data; })
             .then(() => {
                 listaprodus.forEach(item => {
                     console.log(item);
@@ -102,7 +102,7 @@ function Migrador() {
 
             <button onClick={""}>Migrar Velas</button> */}
 
-            <button onClick={()=> agregarEspumas()}>Migrar Espumas</button>
+            <button onClick={() => agregarEspumas()}>Migrar Espumas</button>
 
 
 

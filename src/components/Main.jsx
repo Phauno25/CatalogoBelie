@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
-import { db } from '../firebase/fireConfig'
+import { db, Auth } from '../firebase/fireConfig'
+import { signInWithEmailAndPassword } from 'firebase/auth'
 import CardList from './CardList'
 import CardShort from './CardShort'
 
@@ -8,8 +9,10 @@ import CardShort from './CardShort'
 function Main() {
 
     const [listaProd, setListaProd] = useState([])
+    const [usuario, setUsuario] = useState(null)
 
     useEffect(() => {
+
         const getProductos = async () => {
             const documentos = await getDocs(collection(db, 'productoBelie'))
             const nuevoArray = []
@@ -31,10 +34,20 @@ function Main() {
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
             }))
         }
+        Auth.onAuthStateChanged((user) =>{
+            if (user) {
+                setUsuario(user.email)
+            }
+        })
         getProductos();
 
     }, [])
 
+    const cerrarSesion = (e) =>{
+        e.preventDefault();
+        Auth.signOut();
+        setUsuario(null);
+    }
 
     return (
         <Fragment>
@@ -44,10 +57,11 @@ function Main() {
                     <ul className="links">
                         <li><a href="/" className="link">Inicio</a></li>
                         <li><a href="/" className="link">Catalogo</a></li>
+                       {usuario ? <li><a href="/" onClick={(e)=> cerrarSesion(e)} className="link">Cerrar Sesión</a></li> : ""}
                     </ul>
                 </nav>
                 <div className="header_banner">
-                    <video src="./img/bannerBelie.mp4" muted autoPlay loop></video>
+                    <video src="./img/bannerBelie.mp4" autoPlay muted loop></video>
                     <img src="./img/imgBannerBelie.jpg" alt="banner" />
                     <div className="header_banner_textos">
                         <h1>Estás a un <span className="highlight">CLICK</span></h1>
@@ -198,8 +212,10 @@ function Main() {
                     {    // ------- RENDER DE PERFUMINAS ---------//
                         listaProd.map(item =>
                             item.tipoProducto === "Perfumina" ?
-                                <CardList key={item.id} nombre={item.nombre} descripcion={item.descripcion} color="bg_violeta"
-                                    publicado={item.publicado} tipoAroma={item.tipoAroma} />
+                                <CardList key={item.id} nombre={item.nombre} descripcion={item.descripcion}
+                                    color="bg_violeta" imagen="./img/RosaCardVioleta.png"
+                                    publicado={item.publicado} tipoAroma={item.tipoAroma}
+                                    editar={ usuario ? true : false} />
                                 : ""
                         )
                     }
@@ -224,7 +240,8 @@ function Main() {
                     {  // ------- RENDER DE DIFUSORES ---------//
                         listaProd.map(item =>
                             item.tipoProducto === "Difusor" ?
-                                <CardList key={item.id} nombre={item.nombre} descripcion={item.descripcion} color="bg_rosa"
+                                <CardList key={item.id} nombre={item.nombre} descripcion={item.descripcion}
+                                    color="bg_rosa" imagen="./img/RosaCardRosa.png"
                                     publicado={item.publicado} tipoAroma={item.tipoAroma} />
                                 : ""
 
@@ -251,7 +268,7 @@ function Main() {
                         listaProd.map(item =>
                             item.tipoProducto === "Vela" ?
                                 <CardShort key={item.id} nombre={item.nombre} descripcion={item.descripcion}
-                                    publicado={item.publicado} />
+                                    publicado={item.publicado} imagen="./img/RosaCardAmarillo.png" />
                                 : ""
 
                         )
@@ -277,7 +294,7 @@ function Main() {
                         listaProd.map(item =>
                             item.tipoProducto === "Espuma" ?
                                 <CardShort key={item.id} nombre={item.nombre} descripcion={item.descripcion}
-                                    publicado={item.publicado} />
+                                    publicado={item.publicado} imagen="./img/RosaCardAzul.png" />
                                 : ""
 
                         )
