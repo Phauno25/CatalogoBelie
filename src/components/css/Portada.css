@@ -25,7 +25,7 @@
 }
 
 .portada_highlight {
-    background-color: var(--naranja);
+    background-color: var(--lightNaranja);
 }
 
 .portada_textos div {
@@ -39,7 +39,7 @@
 
 .portada_btn_catalogo {
     background-color: var(--marron);
-    border: solid 3px var(--naranja);
+    border: solid 3px var(--lightNaranja);
     font-size: 3rem;
     font-weight: 700;
     color: var(--negro);
@@ -48,7 +48,7 @@
 }
 
 .portada_btn_catalogo:hover {
-    background-color: var(--naranja);
+    background-color: var(--lightNaranja);
     border: solid 3px var(--marron);
     font-size: 3rem;
     font-weight: 700;
@@ -99,7 +99,7 @@
 
     .portada_btn_catalogo {
         background-color: var(--marron);
-        border: solid 3px var(--naranja);
+        border: solid 3px var(--lightNaranja);
         font-size: 1.8rem;
         font-weight: 700;
         color: var(--negro);
@@ -108,7 +108,7 @@
     }
     
     .portada_btn_catalogo:hover {
-        background-color: var(--naranja);
+        background-color: var(--lightNaranja);
         border: solid 3px var(--marron);
         color: var(--negro);
     }

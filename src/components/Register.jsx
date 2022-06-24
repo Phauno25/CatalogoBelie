@@ -71,28 +71,28 @@ function Register() {
             <div className='register_form'>
 
                 <div className="cardForm">
-                    <form method="post" onSubmit={(e) => registrarUser(e)}>
+                    <form className='registerForm' method="post" onSubmit={(e) => registrarUser(e)}>
                         <h1>Creá tu cuenta.</h1>
                         <p>Ingresa tu mail para ser administrador del catálogo Belie.</p>
                         <hr />
                         <div className='row'>
                             <label htmlFor="nombre">¿Cual es tu nombre?:</label>
-                            <input type="text" name="nombre" onChange={(e) => validarNombre(e.target.value)} />
+                            <input className={errNombre ? "inputError" : "rowInput"} type="text" name="nombre" onChange={(e) => validarNombre(e.target.value)} />
                             <span htmlFor="pass">{errNombre}</span>
                         </div>
                         <div className='row'>
                             <label htmlFor="email">Correo Electrónico:</label>
-                            <input type="email" name="email" placeholder='ejemplo@hotmail.com' onChange={(e) => validarEmail(e.target.value)} />
+                            <input className={errEmail ? "inputError" : "rowInput"} type="email" name="email" placeholder='ejemplo@hotmail.com' onChange={(e) => validarEmail(e.target.value)} />
                             <span htmlFor="pass">{errEmail}</span>
                         </div>
                         <div className='row'>
                             <label htmlFor="pass">Contraseña:</label>
-                            <input type="password" name="pass" onChange={(e) => validarPass(e.target.value)} />
+                            <input className={errPass !== "" ? "inputError" : "rowInput"} type="password" name="pass" onChange={(e) => validarPass(e.target.value)} />
                             <span htmlFor="pass">{errPass}</span>
                         </div>
                         <div className='row'>
                             <label htmlFor="pass2">Repetir contraseña:</label>
-                            <input type="password" name="pass2" onChange={(e) => validarPass2(e.target.value)} />
+                            <input className={errPass2 ? "inputError" : "rowInput"} type="password" name="pass2" onChange={(e) => validarPass2(e.target.value)} />
                             <span htmlFor="pass2">{errPass2}</span>
                         </div>
                         <div className='row'>

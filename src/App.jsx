@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Login from "./components/Login";
 import Main from "./components/Main";
 import OldCatalog from "./components/OldCatalog";
 import Portada from "./components/Portada"
@@ -13,7 +14,7 @@ function App() {
                 <Route path="/catalogo" element={<OldCatalog/>} />
                 <Route path="/nuevoCatalogo" element={<Main/>} />
                 <Route path="/register" element={<Register/>} />
-                <Route path="/login" element={<h1>Todavia Falta</h1>} />
+                <Route path="/login" element={<Login/>} />
             </Routes>
         </BrowserRouter>
     );

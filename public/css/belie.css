@@ -1,15 +1,30 @@
 :root {
-    --nude: #F8F4F0;
-    --rosa: #FAE1DD;
-    --violeta: #DCD8E0;
-    --azul: #D9E3EA;
-    --amarillo: #F4F4CB;
-    --naranja: #F3DCC6;
-    --verde: #DDF1DA;
-    --blancoTrans: #FAF5F0ee;
+
+    /* Colores */
+    --lightNude: #F8F4F0;
+    --lightRosa: #FAE1DD;
+    --lightVioleta: #DCD8E0;
+    --lightAzul: #D9E3EA;
+    --lightAmarillo: #F4F4CB;
+    --lightNaranja: #F3DCC6;
+    --lightVerde: #DDF1DA;
+    --darkRosa: #AD8C87;
+    --darkVioleta:#8A7F94;
+    --darkAzul:#83939E;
+    --darkAmarillo:#A8A87B;
+    --darkNaranja:#A68F79;
+    --darkVerde:#8CA688;
+
+    /* Neutros de ayuda */
     --marron: #BAA593;
     --negro: #3E3E3C;
+    --blanco: #fafafa;
+    --blancoTrans: #FAF5F0ee;
+
+    /*Sombras*/
     --sombraBasica: 5px 5px 10px #777;
+
+    /*Fonts*/
     --joseSans: "Josefin Sans";
     --joseSlab: "Josefin Slab";
     --belieFont: "Al Bizantheum"
@@ -114,40 +129,40 @@ hr {
 /*Colores*/
 
 .nude {
-    color: var(--nude);
+    color: var(--lightNude);
 }
 
 /*Backgrounds*/
 .bg_nude {
-    background-color: var(--nude);
+    background-color: var(--lightNude);
 }
 
 .bg_rosa {
-    background-color: var(--rosa);
+    background-color: var(--lightRosa);
 }
 
 .bg_amarillo {
-    background-color: var(--amarillo);
+    background-color: var(--lightAmarillo);
 }
 
 .bg_violeta {
-    background-color: var(--violeta);
+    background-color: var(--lightVioleta);
 }
 
 .bg_naranja {
-    background-color: var(--naranja);
+    background-color: var(--lightNaranja);
 }
 
 .bg_azul {
-    background-color: var(--azul);
+    background-color: var(--lightAzul);
 }
 
 .brd_rosa {
-    border-color: var(--rosa);
+    border-color: var(--lightRosa);
 }
 
 .brd_violeta {
-    border-color: var(--violeta);
+    border-color: var(--lightVioleta);
 }
 
 /* Background Blobs*/
@@ -184,7 +199,7 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     line-height: 3.5em;
-    background-image: linear-gradient(90deg, var(--nude) 30%, #fff 200%);
+    background-image: linear-gradient(90deg, var(--lightNude) 30%, var(--blanco) 200%);
 }
 
 nav h1 {
@@ -258,7 +273,7 @@ a:visited {
 .highlight {
     background-color: #BAA593;
     padding: 1rem 0.5rem 0rem 0.5rem;
-    color: white;
+    color: var(--blanco);
     font-size: calc(1em * 1.2);
 
 }
@@ -306,7 +321,7 @@ a:visited {
     position: absolute;
     top:-7%;
     left: 40%;
-    background-color: var(--naranja);
+    background-color: var(--lightNaranja);
     width: 25%;
     height: 4rem;
 }
@@ -374,13 +389,13 @@ a:visited {
 
 .cardCat_header_info div p {
     margin-top: 1em;
-    color: var(--nude);
+    color: var(--lightNude);
     font-size: 1.8rem;
     font-weight: 600;
 }
 
 .cardCat_header_info a {
-    background-color: var(--naranja);
+    background-color: var(--lightNaranja);
     font-size: 2.5rem;
     font-weight: 700;
     display: block;
@@ -420,7 +435,7 @@ a:visited {
     margin: 0 1rem 2rem 1rem;
     box-shadow: var(--sombraBasica);
     position: relative;
-    background-image: linear-gradient(90deg, var(--nude) 30%, #fff 120%);
+    background-image: linear-gradient(90deg, var(--lightNude) 30%, var(--blanco) 120%);
     border-radius: 5%;
     overflow: hidden;
     display: flex;
@@ -500,7 +515,7 @@ a:visited {
     font-size: 2rem;
     font-weight: 600;
     color: var(--marron);
-    border-top: solid 2px var(--naranja);
+    border-top: solid 2px var(--lightNaranja);
     text-align: center;
     width: 60%;
     margin: 0 auto;
@@ -517,7 +532,7 @@ a:visited {
 /* CardShort = Usada en Linea Baño y Velas */
 
 .cardShort {
-    background-image: linear-gradient(90deg, var(--nude) 30%, #fff 120%);
+    background-image: linear-gradient(90deg, var(--lightNude) 30%, var(--blanco) 120%);
     width: 360px;
     border-radius: 5%;
     box-shadow: var(--sombraBasica);
@@ -554,14 +569,14 @@ a:visited {
 }
 .cardEdit i{
     background-color: var(--marron);
-    color: var(--nude);
+    color: var(--lightNude);
     padding: 1rem;
     border-radius: 50%;
     box-shadow: var(--sombraBasica);
     transition: transform 0.3s ease-in-out;
 }
 i:hover{
-    background-color: var(--naranja);
+    background-color: var(--lightNaranja);
     color: var(--negro);
     transform: scale(1.1);
 }
