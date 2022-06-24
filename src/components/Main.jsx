@@ -61,7 +61,7 @@ function Main() {
                     </ul>
                 </nav>
                 <div className="header_banner">
-                    <video src="./img/bannerBelie.mp4" autoPlay muted loop></video>
+                    <video src='./img/bannerBelie.mp4' autoPlay muted loop></video>
                     <img src="./img/imgBannerBelie.jpg" alt="banner" />
                     <div className="header_banner_textos">
                         <h1>Estás a un <span className="highlight">CLICK</span></h1>
