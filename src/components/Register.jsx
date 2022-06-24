@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import "./css/Register.css"
 import { Auth } from "../firebase/fireConfig"
-import { createUserWithEmailAndPassword , updateProfile } from "firebase/auth"
+import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth"
 
 function Register() {
 
@@ -26,20 +26,20 @@ function Register() {
     const validarPass = (pass) => {
         if (pass.length >= 8) {
 
-            setErrPass(""); 
+            setErrPass("");
             setPassword(pass);
 
             if (pass === password2) {
-                setErrPass(""); 
+                setErrPass("");
                 setPassword(pass);
             }
-            else{
+            else {
                 setErrPass2("Las contraseñas no coinciden.")
             }
         }
-        else{
+        else {
             setErrPass("La contraseña no puede ser menor a 8 caracteres.")
-        } 
+        }
     }
     const validarPass2 = (pass2) => {
         return pass2 === password ? (setErrPass2(""), setPassword2(pass2)) : setErrPass2("Las contraseñas no coinciden.")
@@ -50,12 +50,13 @@ function Register() {
 
         return email.trim() && nombre.trim() && !errEmail && !errPass && !errPass2 ?
             (
-                await createUserWithEmailAndPassword(Auth,email,password)
-                .then(e => {const user = e.user; return user})
-                .then(e=> updateProfile(e,{displayName: nombre}))
-                .then(()=> alert(`Te doy la bienvenida ${nombre}!`))
-                .then(()=> window.location.href="/") 
-                
+                await createUserWithEmailAndPassword(Auth, email, password)
+                    .then(e => { const user = e.user; return user })
+                    .then(e => {updateProfile(e, { displayName: nombre });return e})
+                    .then(e=> sendEmailVerification(e))
+                    .then(() => alert(`Te doy la bienvenida ${nombre}!`))
+                    .then(() => window.location.href = "/")
+
             )
             :
             (
@@ -65,38 +66,53 @@ function Register() {
     }
 
     return (
-        <div className='container'>
-            <div className="cardForm">
-                <h1 className='centroT'>Registrarse</h1>
-                <p className='centroT'>Ingresa tu mail para ser administrador del catálogo Belie</p>
-                <form method="post" onSubmit={(e) => registrarUser(e)}>
-                <div className='row'>
-                        <label htmlFor="nombre">¿Cual es tu nombre?:</label>
-                        <input type="text" name="nombre" onChange={(e) => validarNombre(e.target.value)} />
-                        <span htmlFor="pass">{errNombre}</span>
-                    </div>
-                    <div className='row'>
-                        <label htmlFor="email">Correo Electrónico:</label>
-                        <input type="email" name="email" placeholder='ejemplo@hotmail.com' onChange={(e) => validarEmail(e.target.value)} />
-                        <span htmlFor="pass">{errEmail}</span>
-                    </div>
-                    <div className='row'>
-                        <label htmlFor="pass">Contraseña:</label>
-                        <input type="password" name="pass" onChange={(e) => validarPass(e.target.value)} />
-                        <span htmlFor="pass">{errPass}</span>
-                    </div>
-                    <div className='row'>
-                        <label htmlFor="pass2">Repetir contraseña:</label>
-                        <input type="password" name="pass2" onChange={(e) => validarPass2(e.target.value)} />
-                        <span htmlFor="pass2">{errPass2}</span>
-                    </div>
-                    <div className='row'>
-                        <button type="submit">Registrarse</button>
-                    </div>
-                </form>
+        <div className='register_container'>
+
+            <div className='register_form'>
+
+                <div className="cardForm">
+                    <form method="post" onSubmit={(e) => registrarUser(e)}>
+                        <h1>Creá tu cuenta.</h1>
+                        <p>Ingresa tu mail para ser administrador del catálogo Belie.</p>
+                        <hr />
+                        <div className='row'>
+                            <label htmlFor="nombre">¿Cual es tu nombre?:</label>
+                            <input type="text" name="nombre" onChange={(e) => validarNombre(e.target.value)} />
+                            <span htmlFor="pass">{errNombre}</span>
+                        </div>
+                        <div className='row'>
+                            <label htmlFor="email">Correo Electrónico:</label>
+                            <input type="email" name="email" placeholder='ejemplo@hotmail.com' onChange={(e) => validarEmail(e.target.value)} />
+                            <span htmlFor="pass">{errEmail}</span>
+                        </div>
+                        <div className='row'>
+                            <label htmlFor="pass">Contraseña:</label>
+                            <input type="password" name="pass" onChange={(e) => validarPass(e.target.value)} />
+                            <span htmlFor="pass">{errPass}</span>
+                        </div>
+                        <div className='row'>
+                            <label htmlFor="pass2">Repetir contraseña:</label>
+                            <input type="password" name="pass2" onChange={(e) => validarPass2(e.target.value)} />
+                            <span htmlFor="pass2">{errPass2}</span>
+                        </div>
+                        <div className='row'>
+                            <button className='submit' type="submit">Registrarse</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
 
+            <div className='register_blob'>
+                <h1 className='BelieTitulo centroT'>Belié</h1>
+                <h3 className='BelieSubtitulo centroT'>AROMAS</h3>
+            </div>
+
+
+
+
         </div>
+
     )
 
 }

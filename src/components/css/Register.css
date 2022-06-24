@@ -1,12 +1,53 @@
+.register_container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: var(--rosa);
+}
+
+.BelieTitulo{
+    margin-top: 2rem;
+    font-size: 10rem;
+    font-family: var(--belieFont);
+}
+.BelieSubtitulo{
+    font-family: var(--joseSlab);
+}
+
+.register_form{
+    width: 50%
+}
+.register_blob{
+    width: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../../public/img/RegisterBG.jpg);
+}
+
+
 .cardForm{
     display: block;
-    width: 50%;
-    margin: 0 auto;
-    background-color: var(--nude);
+    width: 80%;
+    margin: 10% auto 0 auto;
 }
 
 form{
-    height: 50vh;
+    margin-top: 2rem;
+    border: solid 3px var(--nude);
+    padding: 2rem;
+    width: 90%;
+    margin: 0 auto;
+}
+form hr{
+    border: none;
+    border-top: solid 3px var(--nude);
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+}
+form p{
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
 }
 
 form div{
@@ -14,12 +55,11 @@ form div{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
     margin: 2.5rem auto;
 }
 
 .row label{
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: 100%;
     text-align: left;
     margin-left: 1rem;
@@ -29,9 +69,11 @@ form div{
 .row input{
     padding: 1rem 1rem;
     width: 100%;
-    border: solid 3px var(--nude);
+    border: solid 3px var(--violeta);
     border-radius: 7px;
     outline: none;
+    line-height: 2.5rem;
+    font-size: 2rem;
 }
 
 .row span{
@@ -53,7 +95,7 @@ input:focus{
     border: solid 3px var(--marron);
 }
 
-form button{
+.submit{
     width: 50%;
     padding: 2rem 1rem;
     background-color: var(--verde);
@@ -62,11 +104,38 @@ form button{
     font-weight: 900;
     color: var(--negro);
     border-radius: 7px;
-}
-
-button:hover{
+    transition: background-color 0.2s ease-in-out;
     border: solid 3px #BADBC0;
 }
-button:focus{
+
+.submit:hover{
     background-color: #BADBC0;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .register_blob{
+        display: none;
+    }
+    .register_form{
+        width: 100%;
+    }
+    .cardForm{
+        width: 100%;
+    }
+    .cardForm{
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .row label , .row input{
+        line-height: 1.2rem;
+        font-family: 1rem;
+    }
+
+    .submit{
+        padding: 1rem;
+    }
+
 }

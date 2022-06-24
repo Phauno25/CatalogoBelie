@@ -1,0 +1,116 @@
+.portada {
+    width: 100%;
+    height: 100vh;
+}
+
+.portada_textos {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: fit-content;
+    max-width: 45%;
+    background-color: var(--blancoTrans);
+    padding: 3rem;
+
+}
+
+.portada_textos h1 {
+    font-size: 5rem;
+}
+
+.portada_textos p {
+    font-size: 3rem;
+    margin-top: 3%;
+    line-height: 4.5rem;
+
+}
+
+.portada_highlight {
+    background-color: var(--naranja);
+}
+
+.portada_textos div {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.portada_btn_catalogo {
+    background-color: var(--marron);
+    border: solid 3px var(--naranja);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--negro);
+    padding: 2rem;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.portada_btn_catalogo:hover {
+    background-color: var(--naranja);
+    border: solid 3px var(--marron);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--negro);
+    padding: 2rem;
+}
+
+.videoH {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.videoV {
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .videoH {
+        display: none;
+    }
+
+    .videoV {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .portada_textos {
+        top: 5%;
+        left: 3%;
+        margin-right: 7%;
+    }
+
+    .portada_textos h1 {
+        font-size: 2rem;
+    }
+
+    .portada_textos p {
+        font-size: 1.6rem;
+        margin-top: 5%;
+        line-height: 1.8rem;
+
+    }
+
+    .portada_btn_catalogo {
+        background-color: var(--marron);
+        border: solid 3px var(--naranja);
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--negro);
+        padding: 1rem;
+        transition: background-color 0.5s ease-in-out;
+    }
+    
+    .portada_btn_catalogo:hover {
+        background-color: var(--naranja);
+        border: solid 3px var(--marron);
+        color: var(--negro);
+    }
+}
