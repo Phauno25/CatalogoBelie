@@ -58,7 +58,7 @@ function Login() {
 
             <div className='register_form'>
 
-                <div className="cardForm">
+                <div className="cardForm w80">
                     <form className='registerForm' method="post" onSubmit={(e) => logUser(e)}>
                         <h1>Iniciar Sesión.</h1>
                         <p>Accedé para editar el contenido del Catalogo Belié</p>

@@ -70,7 +70,7 @@ function Register() {
 
             <div className='register_form'>
 
-                <div className="cardForm">
+                <div className="cardForm W80">
                     <form className='registerForm' method="post" onSubmit={(e) => registrarUser(e)}>
                         <h1>Creá tu cuenta.</h1>
                         <p>Ingresa tu mail para ser administrador del catálogo Belie.</p>
