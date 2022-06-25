@@ -1,35 +1,57 @@
-import React ,{ useState } from 'react'
-
+import React, { useState } from 'react'
+import { db } from '../firebase/fireConfig'
+import { doc, updateDoc } from 'firebase/firestore'
 function EditProducto(prop) {
 
-const [nombre,setNombre] = useState(prop.nombre);
-const [descripcion,setDescripcion] = useState(prop.descripcion);
-const [tipoAroma,setTipoAroma] = useState(prop.tipoAroma);
-const [tipoProducto,setTipoProducto] = useState(prop,tipoProducto);
-const [publicado,setPublicado] = useState(prop.publicado);
-const [errNombre,setErrNombre] = useState("");
-const [errDescripcion,setErrDescripcion] = useState("");
-const [errTipoAroma,setErrTipoAroma] = useState("");
-const [errTipoProducto,setErrTipoProducto] = useState("");
-const [errPublicado,setErrPublicado] = useState("");
+    const [nombre, setNombre] = useState(prop.nombre);
+    const [descripcion, setDescripcion] = useState(prop.descripcion);
+    const [tipoAroma, setTipoAroma] = useState(prop.tipoAroma);
+    const [tipoProducto, setTipoProducto] = useState(prop, tipoProducto);
+    const [publicado, setPublicado] = useState(prop.publicado);
+    const [errNombre, setErrNombre] = useState("");
+    const [errDescripcion, setErrDescripcion] = useState("");
+    const [errTipoAroma, setErrTipoAroma] = useState("");
+    const [errTipoProducto, setErrTipoProducto] = useState("");
+    const [errPublicado, setErrPublicado] = useState("");
 
-const validarNombre = (e) =>{
-    return e.trim() ? (setErrNombre(""),setNombre(e)) : setErrDescripcion("El nombre no puede quedar vacio")
-}
-const validarDescripcion = (e) =>{
-    return e.trim() ? (setErrDescripcion(""),setDescripcion(e)) : setErrDescripcion("La descripción no puede quedar vacía")
-}
-const validarTipoAroma = (e) =>{
-    return e.trim() ? (setErrTipoAroma(""),setTipoAroma(e)) : setErrTipoAroma("El tipo de aroma no puede quedar vacío")
-}
-const validarTipoProducto = (e) =>{
-    return e.trim() ? (setErrTipoProducto(""),setTipoProducto(e)) : setErrTipoProducto("El tipo de producto no puede quedar vacío")
-}
-const validarPublicado = (e) =>{
-    return errNombre || errDescripcion || errTipoAroma || errTipoProducto ? 
-    setErrPublicado("No se puede realizar esta acción si otros campos tienen errores")  :
-    (setErrPublicado(""),setPublicado(e))
-}
+    const validarNombre = (e) => {
+        return e.trim() ? (setErrNombre(""), setNombre(e)) : setErrDescripcion("El nombre no puede quedar vacio")
+    }
+    const validarDescripcion = (e) => {
+        return e.trim() ? (setErrDescripcion(""), setDescripcion(e)) : setErrDescripcion("La descripción no puede quedar vacía")
+    }
+    const validarTipoAroma = (e) => {
+        return e.trim() ? (setErrTipoAroma(""), setTipoAroma(e)) : setErrTipoAroma("El tipo de aroma no puede quedar vacío")
+    }
+    const validarTipoProducto = (e) => {
+        return e.trim() ? (setErrTipoProducto(""), setTipoProducto(e)) : setErrTipoProducto("El tipo de producto no puede quedar vacío")
+    }
+    const validarPublicado = (e) => {
+        return errNombre || errDescripcion || errTipoAroma || errTipoProducto ?
+            setErrPublicado("No se puede realizar esta acción si otros campos tienen errores") :
+            (setErrPublicado(""), setPublicado(e))
+    }
+
+    const editProducto = async (e) => {
+
+        if (!errNombre && !errDescripcion && !errTipoAroma && !errTipoProducto) {
+            const docu = doc(db, "productoBelie", prop.id);
+            const newDocu =
+            {
+                nombre: nombre, descripcion: descripcion,
+                tipoAroma: tipoAroma,
+                tipoProducto: tipoProducto,
+                publicado: publicado,
+            }
+
+            await updateDoc(docu(newDocu))
+            .then(alert("Producto modificado ok"))
+        }
+
+
+
+    }
+
 
     return (
         <div className='modalEdit'>
@@ -41,12 +63,12 @@ const validarPublicado = (e) =>{
                         <hr />
                         <div className='row'>
                             <label htmlFor="nombre">Nombre</label>
-                            <input type="text" name="nombre" onChange={(e) => validarNombre(e.target.value) }/>
+                            <input type="text" name="nombre" onChange={(e) => validarNombre(e.target.value)} />
                             <span htmlFor="nombre">{errNombre}</span>
                         </div>
                         <div className='row'>
                             <label htmlFor="descripcion">Descripcion:</label>
-                            <textarea maxLength="140" name="descripcion" onChange={(e) => validarDescripcion(e.target.value) } />
+                            <textarea maxLength="140" name="descripcion" onChange={(e) => validarDescripcion(e.target.value)} />
                             <span htmlFor="descripcion">{errDescripcion}</span>
                         </div>
                         <div className='row'>
