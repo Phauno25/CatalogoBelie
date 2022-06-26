@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 
 function Card(props) {
 
-    const { nombre, descripcion, tipoAroma, color, publicado, imagen, editar } = props;
-
+    const { nombre, descripcion, tipoAroma, publicado } = props.producto;
+    const {color, imagen,editar,click} = props
 
     return (
         <div className={`cardList ${publicado == 1 ? "" : "proximamente"}`}>
@@ -19,7 +19,7 @@ function Card(props) {
                     </p>
                 </div>
                 <h3 className="centroT">{tipoAroma}</h3>
-                {editar ? <a href="https://google.com.ar" className='cardEdit'><i class="fa fa-pencil fa-4x"></i></a> : ""}
+                {editar ? <button onClick={click} className='cardEdit'><i className="fa fa-pencil fa-4x"></i></button> : ""}
             </div>
             <div className={`cardList_footer ${color}`}></div>
         </div>

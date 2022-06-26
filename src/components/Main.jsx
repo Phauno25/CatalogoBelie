@@ -1,19 +1,21 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
 import { db, Auth } from '../firebase/fireConfig'
-import { signInWithEmailAndPassword } from 'firebase/auth'
 import CardList from './CardList'
 import CardShort from './CardShort'
+import EditProducto from './EditProducto'
 
 
 function Main() {
 
     const [listaProd, setListaProd] = useState([])
     const [usuario, setUsuario] = useState(null)
+    const [producto, setProducto] = useState(null)
+    const [modal, setModal] = useState(false);
 
     useEffect(() => {
 
-        const getProductos = async () => {
+       /*  const getProductos = async () => {
             const documentos = await getDocs(collection(db, 'productoBelie'))
             const nuevoArray = []
             documentos.forEach(e => {
@@ -33,8 +35,8 @@ function Main() {
                 var textB = b.nombre.toUpperCase();
                 return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
             }))
-        }
-        Auth.onAuthStateChanged((user) =>{
+        } */
+        Auth.onAuthStateChanged((user) => {
             if (user) {
                 setUsuario(user.email)
             }
@@ -43,21 +45,73 @@ function Main() {
 
     }, [])
 
-    const cerrarSesion = (e) =>{
+    const cerrarSesion = (e) => {
         e.preventDefault();
         Auth.signOut();
         setUsuario(null);
     }
 
+    const setEditar = (e) => {
+        const producto =  {
+            id: e.id,
+            nombre: e.nombre,
+            descripcion: e.descripcion,
+            tipoAroma: e.tipoAroma,
+            tipoProducto: e.tipoProducto,
+            publicado: e.publicado,
+
+        } 
+        setProducto(producto);
+        setModal(true);
+    }
+
+    const cancelModal = (e)=>{
+       
+        return e.target == e.currentTarget ?  (
+        setModal(false),
+        setTimeout(()=>{setProducto(null)},1000)) : "";
+    }
+    const getProductos = async () => {
+        const documentos = await getDocs(collection(db, 'productoBelie'))
+        const nuevoArray = []
+        documentos.forEach(e => {
+            const producto = {
+                id: e.id,
+                nombre: e.data().nombre,
+                descripcion: e.data().descripcion,
+                tipoAroma: e.data().tipoAroma,
+                tipoProducto: e.data().tipoProducto,
+                publicado: e.data().publicado
+            }
+            nuevoArray.push(producto)
+
+        })
+        setListaProd(nuevoArray.sort(function (a, b) {
+            var textA = a.nombre.toUpperCase();
+            var textB = b.nombre.toUpperCase();
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        }))
+        
+    }
+    const finish = ()=>{
+        getProductos();
+        setProducto(null)
+    }
+
+
+
     return (
         <Fragment>
+            {
+                producto ? <EditProducto producto={producto} modal={modal} clickCancel={e=>cancelModal(e)} finish={()=>finish()} /> : ""
+            }
             <header>
                 <nav>
                     <h1>Catalogo Belie 2022</h1>
                     <ul className="links">
                         <li><a href="/" className="link">Inicio</a></li>
                         <li><a href="/" className="link">Catalogo</a></li>
-                       {usuario ? <li><a href="/" onClick={(e)=> cerrarSesion(e)} className="link">Cerrar Sesión</a></li> : ""}
+                        {usuario ? <li><a href="/" onClick={(e) => cerrarSesion(e)} className="link">Cerrar Sesión</a></li> : ""}
                     </ul>
                 </nav>
                 <div className="header_banner">
@@ -108,12 +162,12 @@ function Main() {
                         </div>
                     </div>
 
-                    <div class="cardCat">
-                        <div class="cardCat_header">
-                            <div class="cardCat_header_img">
+                    <div className="cardCat">
+                        <div className="cardCat_header">
+                            <div className="cardCat_header_img">
                                 <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
                             </div>
-                            <div class="cardCat_header_info">
+                            <div className="cardCat_header_info">
                                 <div>
                                     <h2>Difusores</h2>
                                     <p>Difusores de varilla de bamboo para todos los ambientes.</p>
@@ -125,12 +179,12 @@ function Main() {
                         </div>
                     </div>
 
-                    <div class="cardCat">
-                        <div class="cardCat_header">
-                            <div class="cardCat_header_img">
+                    <div className="cardCat">
+                        <div className="cardCat_header">
+                            <div className="cardCat_header_img">
                                 <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
                             </div>
-                            <div class="cardCat_header_info">
+                            <div className="cardCat_header_info">
                                 <div>
                                     <h2>Velas de Soja</h2>
                                     <p>Velas aromáticas naturales sin aditivos ni parafina.</p>
@@ -142,12 +196,12 @@ function Main() {
                         </div>
                     </div>
 
-                    <div class="cardCat">
-                        <div class="cardCat_header">
-                            <div class="cardCat_header_img">
+                    <div className="cardCat">
+                        <div className="cardCat_header">
+                            <div className="cardCat_header_img">
                                 <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
                             </div>
-                            <div class="cardCat_header_info">
+                            <div className="cardCat_header_info">
                                 <div>
                                     <h2>Bath Time</h2>
                                     <p>Productos con aromas relajantes para tus momentos de relax.</p>
@@ -159,12 +213,12 @@ function Main() {
                         </div>
                     </div>
 
-                    <div class="cardCat">
-                        <div class="cardCat_header">
-                            <div class="cardCat_header_img">
+                    <div className="cardCat">
+                        <div className="cardCat_header">
+                            <div className="cardCat_header_img">
                                 <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
                             </div>
-                            <div class="cardCat_header_info">
+                            <div className="cardCat_header_info">
                                 <div>
                                     <h2>Oleos &amp; Cremas</h2>
                                     <p>Combiná el cuidado de tu piel con aromas suaves y armónicos.</p>
@@ -176,12 +230,12 @@ function Main() {
                         </div>
                     </div>
 
-                    <div class="cardCat">
-                        <div class="cardCat_header">
-                            <div class="cardCat_header_img">
+                    <div className="cardCat">
+                        <div className="cardCat_header">
+                            <div className="cardCat_header_img">
                                 <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
                             </div>
-                            <div class="cardCat_header_info">
+                            <div className="cardCat_header_info">
                                 <div>
                                     <h2>Sahumerios</h2>
                                     <p>Inciensos de doble empaste para limpieza o aromatización.</p>
@@ -196,10 +250,10 @@ function Main() {
                 </div>
             </section>
 
-            <section class="bg_blob_violeta">
-                <div class="section_bar bg_violeta h3rem"></div>
-                <div class="container w100 space_center">
-                    <div class="catalogo_textos w50">
+            <section className="bg_blob_violeta">
+                <div className="section_bar bg_violeta h3rem"></div>
+                <div className="container w100 space_center">
+                    <div className="catalogo_textos w50">
                         <h1>Perfumes Textiles</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente animi assumenda, odio porro unde
                             rem placeat cumque, quibusdam sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
@@ -207,15 +261,16 @@ function Main() {
                     </div>
 
                 </div>
-                <div id="perfuminas" class="container w100 space_evenly">
+                <div id="perfuminas" className="container w100 space_evenly">
 
                     {    // ------- RENDER DE PERFUMINAS ---------//
                         listaProd.map(item =>
                             item.tipoProducto === "Perfumina" ?
-                                <CardList key={item.id} nombre={item.nombre} descripcion={item.descripcion}
+                                <CardList
+                                    key={item.id}
                                     color="bg_violeta" imagen="./img/RosaCardVioleta.png"
-                                    publicado={item.publicado} tipoAroma={item.tipoAroma}
-                                    editar={ usuario ? true : false} />
+                                    editar={usuario ? true : false}
+                                    producto={item} click={()=>setEditar(item)}/>
                                 : ""
                         )
                     }
@@ -224,10 +279,10 @@ function Main() {
 
 
             </section>
-            <section class="bg_blob_rosa">
-                <div class="section_bar bg_rosa h3rem"></div>
-                <div class="container W100 space_center">
-                    <div class="catalogo_textos w50">
+            <section className="bg_blob_rosa">
+                <div className="section_bar bg_rosa h3rem"></div>
+                <div className="container W100 space_center">
+                    <div className="catalogo_textos w50">
                         <h1>Difusores de Varillas</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente animi assumenda, odio porro unde
                             rem placeat cumque, quibusdam sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
@@ -235,14 +290,15 @@ function Main() {
                     </div>
 
                 </div>
-                <div id="difusores" class="container space_evenly">
+                <div id="difusores" className="container space_evenly">
 
                     {  // ------- RENDER DE DIFUSORES ---------//
                         listaProd.map(item =>
                             item.tipoProducto === "Difusor" ?
-                                <CardList key={item.id} nombre={item.nombre} descripcion={item.descripcion}
+                                <CardList key={item.id}
                                     color="bg_rosa" imagen="./img/RosaCardRosa.png"
-                                    publicado={item.publicado} tipoAroma={item.tipoAroma} />
+                                    editar={usuario ? true : false}
+                                    producto={item} click={()=>setEditar(item)}/>
                                 : ""
 
                         )
@@ -251,10 +307,10 @@ function Main() {
                 </div>
 
             </section>
-            <section class="bg_blob_amarillo">
-                <div class="section_bar bg_amarillo h3rem"></div>
-                <div class="container W100 space_center">
-                    <div class="catalogo_textos w50">
+            <section className="bg_blob_amarillo">
+                <div className="section_bar bg_amarillo h3rem"></div>
+                <div className="container W100 space_center">
+                    <div className="catalogo_textos w50">
                         <h1>Velas de soja aromáticas.</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente animi assumenda, odio porro unde
                             rem placeat cumque, quibusdam sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
@@ -262,13 +318,14 @@ function Main() {
                     </div>
 
                 </div>
-                <div id="velas" class="container space_evenly bg_blob_amarillo">
+                <div id="velas" className="container space_evenly bg_blob_amarillo">
 
                     {  // ------- RENDER DE VELAS ---------//
                         listaProd.map(item =>
                             item.tipoProducto === "Vela" ?
                                 <CardShort key={item.id} nombre={item.nombre} descripcion={item.descripcion}
-                                    publicado={item.publicado} imagen="./img/RosaCardAmarillo.png" />
+                                    publicado={item.publicado} imagen="./img/RosaCardAmarillo.png"
+                                    editar={usuario ? true : false}   />
                                 : ""
 
                         )
@@ -277,10 +334,10 @@ function Main() {
                 </div>
 
             </section>
-            <section class="bg_blob_azul">
-                <div class="section_bar bg_azul h3rem"></div>
-                <div class="container W100 space_center">
-                    <div class="catalogo_textos w50">
+            <section className="bg_blob_azul">
+                <div className="section_bar bg_azul h3rem"></div>
+                <div className="container W100 space_center">
+                    <div className="catalogo_textos w50">
                         <h1>Espumas de Baño</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente animi assumenda, odio porro unde
                             rem placeat cumque, quibusdam sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
@@ -288,13 +345,14 @@ function Main() {
                     </div>
 
                 </div>
-                <div id="bath" class="container space_evenly">
+                <div id="bath" className="container space_evenly">
 
                     {  // ------- RENDER DE ESPUMAS ---------//
                         listaProd.map(item =>
                             item.tipoProducto === "Espuma" ?
                                 <CardShort key={item.id} nombre={item.nombre} descripcion={item.descripcion}
-                                    publicado={item.publicado} imagen="./img/RosaCardAzul.png" />
+                                    publicado={item.publicado} imagen="./img/RosaCardAzul.png"
+                                    editar={usuario ? true : false} />
                                 : ""
 
                         )

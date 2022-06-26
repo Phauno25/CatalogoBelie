@@ -1,18 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { db } from '../firebase/fireConfig'
 import { doc, updateDoc } from 'firebase/firestore'
+import './css/EditProducto.css'
 function EditProducto(prop) {
 
-    const [nombre, setNombre] = useState(prop.nombre);
-    const [descripcion, setDescripcion] = useState(prop.descripcion);
-    const [tipoAroma, setTipoAroma] = useState(prop.tipoAroma);
-    const [tipoProducto, setTipoProducto] = useState(prop, tipoProducto);
-    const [publicado, setPublicado] = useState(prop.publicado);
+    const [nombre, setNombre] = useState(prop.producto.nombre);
+    const [descripcion, setDescripcion] = useState(prop.producto.descripcion);
+    const [tipoAroma, setTipoAroma] = useState(prop.producto.tipoAroma);
+    const [tipoProducto, setTipoProducto] = useState(prop.producto.tipoProducto);
+    const [publicado, setPublicado] = useState(prop.producto.publicado);
     const [errNombre, setErrNombre] = useState("");
     const [errDescripcion, setErrDescripcion] = useState("");
     const [errTipoAroma, setErrTipoAroma] = useState("");
     const [errTipoProducto, setErrTipoProducto] = useState("");
     const [errPublicado, setErrPublicado] = useState("");
+    const [activarModal, setActivarModal] = useState(false);
+
+    useEffect(()=>{
+        prop.modal ? setActivarModal(true) : setActivarModal(false);
+    })
 
     const validarNombre = (e) => {
         return e.trim() ? (setErrNombre(""), setNombre(e)) : setErrDescripcion("El nombre no puede quedar vacio")
@@ -33,19 +39,23 @@ function EditProducto(prop) {
     }
 
     const editProducto = async (e) => {
-
+        e.preventDefault();
         if (!errNombre && !errDescripcion && !errTipoAroma && !errTipoProducto) {
-            const docu = doc(db, "productoBelie", prop.id);
+            const docu = doc(db, "productoBelie", prop.producto.id);
             const newDocu =
             {
-                nombre: nombre, descripcion: descripcion,
+                nombre: nombre, 
+                descripcion: descripcion,
                 tipoAroma: tipoAroma,
                 tipoProducto: tipoProducto,
                 publicado: publicado,
             }
 
-            await updateDoc(docu(newDocu))
+            await updateDoc(docu,newDocu)
             .then(alert("Producto modificado ok"))
+            .then(prop.finish);
+            
+
         }
 
 
@@ -54,7 +64,7 @@ function EditProducto(prop) {
 
 
     return (
-        <div className='modalEdit'>
+        <div className={`modalEdit ${activarModal && prop.modal ? "displayOn" : "displayOff"}`} onClick={prop.clickCancel}>
             <div className="modalContent">
                 <div className="cardForm">
                     <form className='registerForm' method="post" onSubmit={(e) => editProducto(e)}>
@@ -63,34 +73,31 @@ function EditProducto(prop) {
                         <hr />
                         <div className='row'>
                             <label htmlFor="nombre">Nombre</label>
-                            <input type="text" name="nombre" onChange={(e) => validarNombre(e.target.value)} />
+                            <input type="text" value={nombre} name="nombre" onChange={(e) =>validarNombre(e.target.value)} />
                             <span htmlFor="nombre">{errNombre}</span>
                         </div>
                         <div className='row'>
                             <label htmlFor="descripcion">Descripcion:</label>
-                            <textarea maxLength="140" name="descripcion" onChange={(e) => validarDescripcion(e.target.value)} />
+                            <textarea maxLength="140" value={descripcion} name="descripcion" onChange={(e) => validarDescripcion(e.target.value)} />
                             <span htmlFor="descripcion">{errDescripcion}</span>
                         </div>
                         <div className='row'>
                             <label htmlFor="tipoAroma">TipoAroma:</label>
-                            <input type="text" name="tipoAroma" onChange={(e) => validarTipoAroma(e.target.value)} />
+                            <input type="text" value={tipoAroma} name="tipoAroma" onChange={(e) => validarTipoAroma(e.target.value)} />
                             <span htmlFor="tipoAroma">{errTipoAroma}</span>
                         </div>
                         <div className='row'>
                             <label htmlFor="pass">TipoProducto:</label>
-                            <input type="text" name="pass" onChange={(e) => validarTipoProducto(e.target.value)} />
+                            <input type="text" value={tipoProducto} name="pass" onChange={(e) => validarTipoProducto(e.target.value)} />
                             <span htmlFor="pass">{errTipoProducto}</span>
                         </div>
                         <div className='row'>
                             <label htmlFor="pass">Publicado:</label>
-                            <input type="checkbox" name="pass" onChange={(e) => validarPublicado(e.target.value)} />
+                            <input type="checkbox" checked={publicado} name="pass" onChange={(e) => validarPublicado(e.target.value)} />
                             <span htmlFor="pass">{errPublicado}</span>
                         </div>
                         <div className='row'>
-                            <button className='submit' type="submit">Iniciar Sesion</button>
-                        </div>
-                        <div className={errLog ? "logError" : ""}>
-                            <span>{errLog}</span>
+                            <button className='submit' type="submit">Confirmar</button>
                         </div>
                     </form>
                 </div>
