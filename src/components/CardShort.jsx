@@ -2,7 +2,7 @@ import React from 'react'
 
 function CardShort(props) {
 
-    const { nombre, descripcion, publicado,imagen } = props
+    const { nombre, descripcion, publicado,imagen,editar,click } = props
 
 
     return (
@@ -11,10 +11,11 @@ function CardShort(props) {
                 <img src={imagen} alt={nombre} />
             </div>
             <div className="cardShort_body">
-                <h1>{nombre}</h1>
+                <h2>{nombre}</h2>
                 <hr />
                 <p>{descripcion}</p>
             </div>
+            {editar ? <button onClick={click} className='cardEdit'><i className="fa fa-pencil fa-4x"></i></button> : ""}
         </div>
     )
 

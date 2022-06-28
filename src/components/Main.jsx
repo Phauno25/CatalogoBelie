@@ -1,47 +1,31 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
 import { db, Auth } from '../firebase/fireConfig'
+import CardCat from './CardCat'
 import CardList from './CardList'
 import CardShort from './CardShort'
 import EditProducto from './EditProducto'
+import EditCategoria from './EditCategoria'
+
 
 
 function Main() {
 
+    const [listaCat, setListaCat] = useState([])
     const [listaProd, setListaProd] = useState([])
     const [usuario, setUsuario] = useState(null)
     const [producto, setProducto] = useState(null)
+    const [categoria, setCategoria] = useState(null)
     const [modal, setModal] = useState(false);
 
     useEffect(() => {
-
-       /*  const getProductos = async () => {
-            const documentos = await getDocs(collection(db, 'productoBelie'))
-            const nuevoArray = []
-            documentos.forEach(e => {
-                const producto = {
-                    id: e.id,
-                    nombre: e.data().nombre,
-                    descripcion: e.data().descripcion,
-                    tipoAroma: e.data().tipoAroma,
-                    tipoProducto: e.data().tipoProducto,
-                    publicado: e.data().publicado
-                }
-                nuevoArray.push(producto)
-
-            })
-            setListaProd(nuevoArray.sort(function (a, b) {
-                var textA = a.nombre.toUpperCase();
-                var textB = b.nombre.toUpperCase();
-                return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
-            }))
-        } */
         Auth.onAuthStateChanged((user) => {
             if (user) {
                 setUsuario(user.email)
             }
         })
         getProductos();
+        getCategorias();
 
     }, [])
 
@@ -51,8 +35,9 @@ function Main() {
         setUsuario(null);
     }
 
-    const setEditar = (e) => {
-        const producto =  {
+    const setEditarProd = (e) => {
+        setModal(true);
+        const producto = {
             id: e.id,
             nombre: e.nombre,
             descripcion: e.descripcion,
@@ -60,16 +45,30 @@ function Main() {
             tipoProducto: e.tipoProducto,
             publicado: e.publicado,
 
-        } 
+        }
         setProducto(producto);
-        setModal(true);
+
     }
 
-    const cancelModal = (e)=>{
-       
-        return e.target == e.currentTarget ?  (
-        setModal(false),
-        setTimeout(()=>{setProducto(null)},1000)) : "";
+    const setEditarCat = (e) => {
+        setModal(true);
+        const categoria = {
+            id: e.id,
+            nombre: e.nombre,
+            descripcion: e.descripcion,
+            tipoAroma: e.tipoAroma,
+            imagen: e.imagen,
+
+        }
+        setCategoria(categoria);
+
+    }
+
+    const cancelModal = (e) => {
+
+        return e.target == e.currentTarget ? (
+            setModal(false),
+            setTimeout(() => { return (setProducto(null),setCategoria(null)) }, 1000)) : "";
     }
     const getProductos = async () => {
         const documentos = await getDocs(collection(db, 'productoBelie'))
@@ -91,19 +90,48 @@ function Main() {
             var textB = b.nombre.toUpperCase();
             return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
         }))
-        
+
     }
-    const finish = ()=>{
+
+    const getCategorias = async () => {
+        const documentos = await getDocs(collection(db, 'categoriaBelie'))
+        const nuevoArray = []
+        documentos.forEach(e => {
+            const categoria = {
+                id: e.id,
+                nombre: e.data().nombre,
+                descripcion: e.data().descripcion,
+                imagen: e.data().imagen,
+            }
+            nuevoArray.push(categoria)
+
+        })
+        setListaCat(nuevoArray.sort(function (a, b) {
+            var textA = a.nombre.toUpperCase();
+            var textB = b.nombre.toUpperCase();
+            return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+        }))
+
+    }
+    const finishProd = () => {
         getProductos();
         setProducto(null)
+    }
+    const finishCat = () =>{
+        getCategorias();
+        setCategoria(null)
     }
 
 
 
     return (
         <Fragment>
+            {  
+                producto ? <EditProducto producto={producto} modal={modal} clickCancel={e => cancelModal(e)} finish={() => finishProd()} /> : ""
+                
+            }
             {
-                producto ? <EditProducto producto={producto} modal={modal} clickCancel={e=>cancelModal(e)} finish={()=>finish()} /> : ""
+                categoria ? <EditCategoria categoria={categoria} modal={modal} clickCancel={e => cancelModal(e)} finish={() => finishCat()} /> : ""
             }
             <header>
                 <nav>
@@ -123,14 +151,17 @@ function Main() {
                     </div>
                 </div>
             </header>
-            <section className="wrapper vh100">
+            <section className="wrapper vh100 renovation_textos">
 
-                <h1>¡Nos Renovamos!</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam, ratione eum adipisci
-                    illo assumenda, cupiditate non reprehenderit vitae magni reiciendis recusandae maxime laudantium
-                    debitis praesentium at accusamus mollitia sit.</p>
+                <div container=".page-content" base-size="containerSize" smooth-parallax="" start-movement=".05" end-position-x="1.3" >
 
 
+                    <h1>¡Nos Renovamos!</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam, ratione eum adipisci
+                        illo assumenda, cupiditate non reprehenderit vitae magni reiciendis recusandae maxime laudantium
+                        debitis praesentium at accusamus mollitia sit.</p>
+
+                </div>
             </section>
             <section id="categorias" className="wrapper mb4 circlepath">
                 <div className="section_bar bg_nude h3rem"></div>
@@ -145,112 +176,22 @@ function Main() {
                 </div>
                 <div className="container w80 space_around  ">
 
-                    <div className="cardCat">
-                        <div className="cardCat_header">
-                            <div className="cardCat_header_img">
-                                <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
-                            </div>
-                            <div className="cardCat_header_info">
-                                <div>
-                                    <h2>Perfume Textil</h2>
-                                    <p>Para que tus prendas lleven todo el aroma de Belie durante todo el dia.</p>
-                                </div>
+                    {    // ------- RENDER DE CATEGORIAS ---------//
+                        listaCat.map(item =>
 
+                            <CardCat
+                                key={item.id}
+                                categoria={item}
+                                editar={usuario ? true : false}
+                                click={() => setEditarCat(item)} />
 
-                                <a href="">¡Quiero ver!</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="cardCat">
-                        <div className="cardCat_header">
-                            <div className="cardCat_header_img">
-                                <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
-                            </div>
-                            <div className="cardCat_header_info">
-                                <div>
-                                    <h2>Difusores</h2>
-                                    <p>Difusores de varilla de bamboo para todos los ambientes.</p>
-                                </div>
-
-
-                                <a href="">¡Quiero ver!</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="cardCat">
-                        <div className="cardCat_header">
-                            <div className="cardCat_header_img">
-                                <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
-                            </div>
-                            <div className="cardCat_header_info">
-                                <div>
-                                    <h2>Velas de Soja</h2>
-                                    <p>Velas aromáticas naturales sin aditivos ni parafina.</p>
-                                </div>
-
-
-                                <a href="">¡Quiero ver!</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="cardCat">
-                        <div className="cardCat_header">
-                            <div className="cardCat_header_img">
-                                <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
-                            </div>
-                            <div className="cardCat_header_info">
-                                <div>
-                                    <h2>Bath Time</h2>
-                                    <p>Productos con aromas relajantes para tus momentos de relax.</p>
-                                </div>
-
-
-                                <a href="">¡Quiero ver!</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="cardCat">
-                        <div className="cardCat_header">
-                            <div className="cardCat_header_img">
-                                <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
-                            </div>
-                            <div className="cardCat_header_info">
-                                <div>
-                                    <h2>Oleos &amp; Cremas</h2>
-                                    <p>Combiná el cuidado de tu piel con aromas suaves y armónicos.</p>
-                                </div>
-
-
-                                <a href="">¡Quiero ver!</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="cardCat">
-                        <div className="cardCat_header">
-                            <div className="cardCat_header_img">
-                                <img src="./img/CatPerfumina.png" alt="Perfume Textil" />
-                            </div>
-                            <div className="cardCat_header_info">
-                                <div>
-                                    <h2>Sahumerios</h2>
-                                    <p>Inciensos de doble empaste para limpieza o aromatización.</p>
-                                </div>
-
-
-                                <a href="">¡Quiero ver!</a>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    }
 
                 </div>
             </section>
 
-            <section className="bg_blob_violeta">
+            <section id="perfuminas" className="bg_blob_violeta">
                 <div className="section_bar bg_violeta h3rem"></div>
                 <div className="container w100 space_center">
                     <div className="catalogo_textos w50">
@@ -261,7 +202,7 @@ function Main() {
                     </div>
 
                 </div>
-                <div id="perfuminas" className="container w100 space_evenly">
+                <div className="container w100 space_evenly">
 
                     {    // ------- RENDER DE PERFUMINAS ---------//
                         listaProd.map(item =>
@@ -270,7 +211,7 @@ function Main() {
                                     key={item.id}
                                     color="bg_violeta" imagen="./img/RosaCardVioleta.png"
                                     editar={usuario ? true : false}
-                                    producto={item} click={()=>setEditar(item)}/>
+                                    producto={item} click={() => setEditarProd(item)} />
                                 : ""
                         )
                     }
@@ -298,7 +239,7 @@ function Main() {
                                 <CardList key={item.id}
                                     color="bg_rosa" imagen="./img/RosaCardRosa.png"
                                     editar={usuario ? true : false}
-                                    producto={item} click={()=>setEditar(item)}/>
+                                    producto={item} click={() => setEditarProd(item)} />
                                 : ""
 
                         )
@@ -325,7 +266,7 @@ function Main() {
                             item.tipoProducto === "Vela" ?
                                 <CardShort key={item.id} nombre={item.nombre} descripcion={item.descripcion}
                                     publicado={item.publicado} imagen="./img/RosaCardAmarillo.png"
-                                    editar={usuario ? true : false}   />
+                                    editar={usuario ? true : false} producto={item} click={() => setEditarProd(item)} />
                                 : ""
 
                         )
@@ -352,7 +293,7 @@ function Main() {
                             item.tipoProducto === "Espuma" ?
                                 <CardShort key={item.id} nombre={item.nombre} descripcion={item.descripcion}
                                     publicado={item.publicado} imagen="./img/RosaCardAzul.png"
-                                    editar={usuario ? true : false} />
+                                    editar={usuario ? true : false} producto={item} click={() => setEditarProd(item)} />
                                 : ""
 
                         )

@@ -7,6 +7,8 @@ import Portada from "./components/Portada"
 import Register from "./components/Register";
 
 function App() {
+
+
     return (
         <BrowserRouter>
             <Routes>

@@ -23,6 +23,7 @@
 
     /*Sombras*/
     --sombraBasica: 5px 5px 10px #777;
+    --sombraChica: 3px 3px 3px #777;
 
     /*Fonts*/
     --joseSans: "Josefin Sans";
@@ -40,6 +41,7 @@
 html {
     color: var(--negro);
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -108,6 +110,12 @@ hr {
 
 /* Flex */
 
+.d-flex{
+    display: flex;
+}
+.flex-row{
+    flex-direction: row;
+}
 .space_between {
     justify-content: space-between;
 }
@@ -172,21 +180,25 @@ hr {
 .bg_blob_violeta {
     background-image: url(../img/bgBlobVioleta.svg);
     background-size: cover;
+    background-attachment:fixed;
 }
 
 .bg_blob_rosa {
     background-image: url(../img/bgBlobRosa.svg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .bg_blob_amarillo {
     background-image: url(../img/bgBlobAmarillo.svg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .bg_blob_azul {
     background-image: url(../img/bgBlobAzul.svg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 
@@ -304,10 +316,10 @@ a:visited {
 
 
 /*Renovacion*/
-/* .renovation_textos{
+.renovation_textos{
     padding: 2rem;
     position: relative;
-}
+}/*
 
 .renovation_textos::before{
     position: absolute;
@@ -319,15 +331,14 @@ a:visited {
     height: 110%;
     content: " ";
     z-index: -1;
-}
+}*/
 .renovation_textos div{
     position: absolute;
-    top:-7%;
+    top:5%;
     left: 40%;
     background-color: var(--lightNaranja);
     width: 25%;
-    height: 4rem;
-}
+}/*
 .renovation_textos h1{
     padding: 2rem 0.5rem;
     font-size: 4rem;
@@ -438,12 +449,25 @@ a:visited {
     margin: 0 1rem 2rem 1rem;
     box-shadow: var(--sombraBasica);
     position: relative;
-    background-image: linear-gradient(90deg, var(--lightNude) 30%, var(--blanco) 120%);
+    /* background-image: linear-gradient(90deg, var(--lightNude) 30%, var(--blanco) 120%); */
+    background-color: var(--lightNude);
     border-radius: 5%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition-property: background-color,box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
 }
+.cardList:hover{
+    background-color: var(--blanco);
+    box-shadow: var(--sombraChica);
+}
+.cardList:hover .cardList_body_textos h1{
+    background-color: var(--lightNude);
+    box-shadow: var(--sombraChica);
+}
+
 
 .proximamente::before {
 
@@ -499,10 +523,15 @@ a:visited {
 
 .cardList_body_textos h1 {
     font-family: var(--joseSlab);
+    cursor: pointer;
     padding: 1rem;
     font-size: 3.5rem;
     font-weight: 900;
-
+    display: block;
+    margin: 0 auto;
+    transition-property: background-color, box-shadow;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
 
 }
 
@@ -556,8 +585,8 @@ a:visited {
     padding: 3rem 3rem;
 }
 
-.cardShort_body h1 {
-    margin-left: 2rem;
+.cardShort_body h2 {
+    margin-left: 1.5rem;
 }
 
 .cardShort_body p {
@@ -569,6 +598,8 @@ a:visited {
     position: absolute;
     top: 5%;
     right: 5%;
+    border: none;
+    background: none;
 }
 .cardEdit i{
     background-color: var(--marron);

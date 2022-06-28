@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function Card(props) {
+function CardList(props) {
 
     const { nombre, descripcion, tipoAroma, publicado } = props.producto;
     const {color, imagen,editar,click} = props
@@ -26,4 +26,4 @@ function Card(props) {
     )
 }
 
-export default Card
+export default CardList
