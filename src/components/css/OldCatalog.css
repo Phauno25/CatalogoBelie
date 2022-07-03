@@ -57,19 +57,6 @@
 .logo_nombre{
     font-size: 24px;
 }
-
-.link{
-    display: inline-block;
-    text-decoration: none;
-    font-weight: 300;
-    padding: 10px;
-    color: inherit;
-}
-.link_active{
-    color:var(--gold1);
-    font-weight: 700;
-}
-
 .punto{
     color:var(--gold1);
 }

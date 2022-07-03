@@ -1,0 +1,71 @@
+.cardCat{
+    height: 400px;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: var(--sombraBasica);
+    overflow: hidden;
+}
+.cardCat:hover .cardCat_body{
+    top: 0;
+} 
+.cardCat img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.cardCat_body{
+    width: 100%;
+    padding: 0 3rem;
+    position: absolute;
+    top: 77%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: top 0.5s ease-in-out;
+    background-color: rgba(243, 220, 198,0.95);
+}
+.cardCat_body > div > h1{
+    display: block;
+    width: fit-content;
+    padding: 1rem 1rem;
+    color: var(--negro);
+    margin-top: 1.5rem;
+    border-radius: 5%;
+}
+.cardCat_body > div > p{
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+}
+.cardCatBtn{
+    color: var(--negro);
+    background-color: var(--blanco);
+    border: none;
+    display: block;
+    width: fit-content;
+    padding: 1.5rem 2rem;  
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    z-index: 2;
+    border-radius: 5%;
+    cursor: pointer;
+}
+.cardCatBtn:hover{
+    color: var(--blanco);
+    background-color: var(--negro);
+}
+
+@media only screen and (max-width: 768px) {
+
+    .cardCat{
+        width: 90%;
+    }
+    .cardCat_body{
+        top: 80%;
+    }
+
+}

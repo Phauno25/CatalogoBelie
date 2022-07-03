@@ -6,14 +6,14 @@
     --lightVioleta: #DCD8E0;
     --lightAzul: #D9E3EA;
     --lightAmarillo: #F4F4CB;
-    --lightNaranja: #F3DCC6;
+    --lightNaranja: #f3dcc6;
     --lightVerde: #DDF1DA;
     --darkRosa: #AD8C87;
-    --darkVioleta:#8A7F94;
-    --darkAzul:#83939E;
-    --darkAmarillo:#A8A87B;
-    --darkNaranja:#A68F79;
-    --darkVerde:#8CA688;
+    --darkVioleta: #8A7F94;
+    --darkAzul: #83939E;
+    --darkAmarillo: #A8A87B;
+    --darkNaranja: #A68F79;
+    --darkVerde: #8CA688;
 
     /* Neutros de ayuda */
     --marron: #BAA593;
@@ -49,7 +49,10 @@ body {
     font-size: 1.6rem;
 
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 h1 {
     font-size: 3.2rem;
 }
@@ -76,6 +79,10 @@ hr {
     width: 50%;
 }
 
+.w70 {
+    width: 70%;
+}
+
 .w80 {
     width: 80%;
 }
@@ -99,7 +106,8 @@ hr {
 .h3rem {
     height: 3rem;
 }
-.h100{
+
+.h100 {
     height: 100%;
 }
 
@@ -108,14 +116,25 @@ hr {
     margin-bottom: 4rem;
 }
 
+.p2 {
+    padding: 2rem;
+}
+
+.p2h {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
 /* Flex */
 
-.d-flex{
+.d-flex {
     display: flex;
 }
-.flex-row{
+
+.flex-row {
     flex-direction: row;
 }
+
 .space_between {
     justify-content: space-between;
 }
@@ -131,6 +150,11 @@ hr {
 .space_center {
     justify-content: center;
 }
+
+.space_end {
+    justify-content: flex-end;
+}
+
 
 /*Textos*/
 .centroT {
@@ -180,7 +204,7 @@ hr {
 .bg_blob_violeta {
     background-image: url(../img/bgBlobVioleta.svg);
     background-size: cover;
-    background-attachment:fixed;
+    background-attachment: fixed;
 }
 
 .bg_blob_rosa {
@@ -209,6 +233,7 @@ header {
 }
 
 nav {
+    padding: 1rem 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -236,15 +261,28 @@ a:visited {
     margin: 0 5% 0 0;
 }
 
-.links li {
-
-    padding: 0 1em;
+.link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    transition: background-color 0.3s ease-out;
+}
+.link_active{ 
+    font-weight: 700;
+    background-color: var(--lightVioleta);
+}
+.link:hover{
+    background-color: var(--lightNaranja);
+}
+.link_active:hover{
+    background-color: var(--darkVioleta);
+    color: var(--blanco);
 }
 
 .header_banner {
     width: auto;
     height: calc(100vh - 56px);
-
 }
 
 .header_banner video {
@@ -259,7 +297,6 @@ a:visited {
     height: 100%;
     object-fit: cover;
     display: none;
-
 }
 
 .header_banner_textos {
@@ -316,10 +353,12 @@ a:visited {
 
 
 /*Renovacion*/
-.renovation_textos{
+.renovation_textos {
     padding: 2rem;
     position: relative;
-}/*
+}
+
+/*
 
 .renovation_textos::before{
     position: absolute;
@@ -332,13 +371,15 @@ a:visited {
     content: " ";
     z-index: -1;
 }*/
-.renovation_textos div{
+.renovation_textos div {
     position: absolute;
-    top:5%;
+    top: 5%;
     left: 40%;
     background-color: var(--lightNaranja);
     width: 25%;
-}/*
+}
+
+/*
 .renovation_textos h1{
     padding: 2rem 0.5rem;
     font-size: 4rem;
@@ -455,15 +496,17 @@ a:visited {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition-property: background-color,box-shadow;
+    transition-property: background-color, box-shadow;
     transition-duration: 0.5s;
     transition-timing-function: ease-out;
 }
-.cardList:hover{
+
+.cardList:hover {
     background-color: var(--blanco);
     box-shadow: var(--sombraChica);
 }
-.cardList:hover .cardList_body_textos h1{
+
+.cardList:hover .cardList_body_textos h1 {
     background-color: var(--lightNude);
     box-shadow: var(--sombraChica);
 }
@@ -593,15 +636,17 @@ a:visited {
     padding: 0 1.5rem;
 }
 
-.cardEdit{
+.cardEdit {
     display: block;
     position: absolute;
     top: 5%;
     right: 5%;
     border: none;
     background: none;
+    cursor: pointer;
 }
-.cardEdit i{
+
+.cardEdit i {
     background-color: var(--marron);
     color: var(--lightNude);
     padding: 1rem;
@@ -609,10 +654,28 @@ a:visited {
     box-shadow: var(--sombraBasica);
     transition: transform 0.3s ease-in-out;
 }
-i:hover{
+
+i:hover {
     background-color: var(--lightNaranja);
     color: var(--negro);
     transform: scale(1.1);
+}
+
+.backToCat {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: right;
+    background-color: var(--lightNude);
+    padding: 2rem;
+    transition: background-color 0.3s ease-in;
+    border-radius: 5%;
+}
+
+.backToCat:hover {
+    color: var(--blanco);
+    background-color: var(--negro);
 }
 
 @media only screen and (max-width: 768px) {

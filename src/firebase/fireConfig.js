@@ -6,13 +6,13 @@ import { getStorage } from "firebase/storage";
 
 //FALTA: CREAR VARIABLES DE ENTORNO PARA ESTE CODIGO.
 const firebaseConfig = {
-  apiKey: "AIzaSyADuMI5ixPGQbMpfCVZV55hYYRxO_iaBBY",
-  authDomain: "catalogobelie.firebaseapp.com",
-  projectId: "catalogobelie",
-  storageBucket: "catalogobelie.appspot.com",
-  messagingSenderId: "498390481280",
-  appId: "1:498390481280:web:fe327e13388100b99ce965",
-  measurementId: "G-M3FCLMH23T"
+  apiKey: `${process.env.REACT_APP_API_KEY}`,
+  authDomain: `${process.env.REACT_APP_AUTH_DOMAIN}`,
+  projectId: `${process.env.REACT_APP_PROJECT_ID}`,
+  storageBucket: `${process.env.REACT_APP_STORAGE_BUCKET}`,
+  messagingSenderId: `${process.env.REACT_MESSAGE_SENDER_ID}`,
+  appId: `${process.env.REACT_APP_APP_ID}`,
+  measurementId: `${process.env.REACT_APP_MEASUREMENT_ID}`,
 };
 
 // Initializamos Firebase

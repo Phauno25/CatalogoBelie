@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import { db } from '../firebase/fireConfig'
 import { doc, updateDoc } from 'firebase/firestore'
-import {Storage} from '../firebase/fireConfig'
-import {ref, uploadBytes,getDownloadURL} from 'firebase/storage'
+import { Storage } from '../firebase/fireConfig'
+import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
 import './css/EditProducto.css'
 function EditCategoria(prop) {
 
     const [nombre, setNombre] = useState(prop.categoria.nombre);
     const [descripcion, setDescripcion] = useState(prop.categoria.descripcion);
     const [imagenCat, setImagenCat] = useState(prop.categoria.imagen);
+    const [uploadImg, setUploadImg] = useState(null);
     const [errNombre, setErrNombre] = useState("");
     const [errDescripcion, setErrDescripcion] = useState("");
     //const [errImagen, setErrImagen] = useState("");
     const [activarModal, setActivarModal] = useState(false);
-
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         prop.modal ? setActivarModal(true) : setActivarModal(false);
@@ -27,36 +28,52 @@ function EditCategoria(prop) {
     }
 
     const validarImagen = (e) => {
-        let archivo = URL.createObjectURL(e.target.files[0]);
-        setImagenCat(archivo);
-        console.log(archivo);
+        const reader = new FileReader();
+        const archivo = e.target.files[0];
+        reader.readAsDataURL(archivo)
+        reader.onload = () => {
+            setImagenCat(reader.result)
+        }
+        setUploadImg(archivo);
     }
 
 
     const EditCategoria = async (e) => {
         e.preventDefault();
+        setLoading(true);
         if (!errNombre && !errDescripcion) {
 
-            const storageRef = ref(Storage, '/CatPerfumina.png');
-            uploadBytes(storageRef,imagenCat).then(console.log("Imagen cargada con exito")).catch(e=>console.log(e.code))
+            let url = `/Cat${prop.categoria.tipoCategoria}.jpg`;
+            let storageRef = ref(Storage, url);
+            const metadata = {
+                contentType: uploadImg.type,
+                
+            };
+            console.log(metadata);
 
-            const docu = doc(db, "categoriaBelie", prop.categoria.id);
-            const newDocu =
-            {
-                nombre: nombre,
-                descripcion: descripcion,
-                imagen: imagenCat,
-            }
-
-            await updateDoc(docu, newDocu)
-                .then(alert("Categoria modificada ok"))
-                .then(prop.finish);
-
+            uploadBytes(storageRef, uploadImg, metadata)
+                .then(storageRef = ref(Storage, 'url'))
+                .then(getDownloadURL(storageRef))
+                .then(e => setImagenCat(e))
+                .then(updateDocuCat())
 
         }
 
+    }
 
+    const updateDocuCat = async () => {
+        const docu = doc(db, "categoriaBelie", prop.categoria.id);
+        const newDocu =
+        {
+            nombre: nombre,
+            descripcion: descripcion,
+            imagen: imagenCat,
+        }
 
+        await updateDoc(docu, newDocu)
+            .then(setLoading(false))
+            .then(alert("Categoria modificada ok"))
+            .then(prop.finish);
     }
 
 
@@ -81,16 +98,23 @@ function EditCategoria(prop) {
                             <span htmlFor="descripcion">{errDescripcion}</span>
                         </div>
                         <div className="row">
-                            <label htmlFor="imagenCat">imagen:</label>
-                            <div className='d-flex flex-row'>
-                            <input className="rowInput" type="file" name="imagenCat" onChange={(e) => validarImagen(e)} />
-                            <img className="imgCat" alt={nombre} src={imagenCat} />
-                            </div>                  
-                            <span htmlFor="imagenCat"></span>
+                            <label htmlFor="uploadImg">imagen:</label>
+                            <input className="rowInput" type="file" name="uploadImg" onChange={(e) => validarImagen(e)} />
+                            <span htmlFor="uploadImg"></span>
                         </div>
-                        <div className='row'>
-                            <button disabled={errNombre || errDescripcion ? true : false} className='submit' type="submit">Confirmar</button>
+                        <div className="row">
+                            <img className="uploadImg" alt={nombre} src={imagenCat} />
                         </div>
+
+                        {
+                            loading
+                                ?
+                                <i class="fa fa-spinner fa-spin" aria-hidden="true"></i>
+                                :
+                                <div className='row'>
+                                    <button disabled={errNombre || errDescripcion ? true : false} className='submit' type="submit">Confirmar</button>
+                                </div>
+                        }
                     </form>
                 </div>
             </div>
