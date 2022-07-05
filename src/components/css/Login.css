@@ -1,0 +1,68 @@
+
+
+/*COMPONENTES LOGIN Y REGISTER TOMAN ESTA HOJA DE ESTILOS*/
+
+.register_container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: var(--lightRosa);
+    padding-bottom: 1rem;
+}
+
+.BelieTitulo {
+    margin-top: 2rem;
+    font-size: 10rem;
+    font-family: var(--belieFont);
+}
+
+.BelieSubtitulo {
+    font-family: var(--joseSlab);
+}
+
+.register_blob {
+    width: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../../public/img/RegisterBG.jpg);
+}
+.cardForm {
+    display: block;
+    margin: 10% auto 0 auto;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .register_blob {
+        display: none;
+    }
+
+    .register_form {
+        width: 100%;
+    }
+
+    .cardForm {
+        width: 100%;
+    }
+
+    .cardForm {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width: 376px) {
+
+
+    .cardForm {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        margin: 0;
+    }
+    .register_container > div{
+        width: 100%;
+    }
+}

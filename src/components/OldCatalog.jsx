@@ -24,16 +24,7 @@ function OldCatalog() {
                         <p className="servicios_subtitulo">Perfumes textiles de aromas intensos y duraderos.</p>
                         <article className="container_card">
 
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/africa.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Gourmand</p>
-                                    <h3 className="cardOld_titulo">Africa<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Fragancia exótica que evoca la rareza de la amarula conmbinada con el clásico dulzor de la vainilla.
-                                    </p>
-
-                                </div>
-                            </div>
+                
 
                             <div className="cardOld">
                                 <img className="cardOld_img" src="img/applecrumble.jpg" />
@@ -46,41 +37,11 @@ function OldCatalog() {
                             </div>
 
                             <div className="cardOld">
-                                <img className="cardOld_img" src="img/asana.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Oriental</p>
-                                    <h3 className="cardOld_titulo">Asana<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Fragancia oriental, citrica y especiada de cascaras de naranja, ambar y nag champa.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="cardOld">
                                 <img className="cardOld_img" src="img/bohemian.jpg" />
                                 <div className="cardOld_textos">
                                     <p className="card_antetitulo">Floral amaderado</p>
                                     <h3 className="cardOld_titulo">Bohemian<i className="punto">.</i></h3>
                                     <p className="card_parrafo">Fragancia Floral, leñosa y avainillada con fuertes notas de vainilla y palo de rosa que le dan una identidad unica.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/candybar.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Gourmand</p>
-                                    <h3 className="cardOld_titulo">CandyBar<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Es tan dulce que al perfumar tus prendas y telas vas a teletransportarte a los carritos de dulces que están en los shoppings repletos de gomitas y malvaviscos.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/cielo.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Alehidico Oceanico</p>
-                                    <h3 className="cardOld_titulo">Cielo<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Fragancia floral y jabonosa. Perfecta para las que adoran sentir en sus telas la frescura, con toques cítricos bañados por el sol.
                                     </p>
                                 </div>
                             </div>
@@ -116,16 +77,6 @@ function OldCatalog() {
                             </div>
 
                             <div className="cardOld">
-                                <img className="cardOld_img" src="img/corazonada.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Frutal Gourmand</p>
-                                    <h3 className="cardOld_titulo">Corazonada<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Frutos rojos, caramelo y almizcle cremoso, una de nuestras gourmand preferidas!
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="cardOld">
                                 <img className="cardOld_img" src="img/cotton.jpg" />
                                 <div className="cardOld_textos">
                                     <p className="card_antetitulo">Alehidico</p>
@@ -135,24 +86,12 @@ function OldCatalog() {
                                 </div>
                             </div>
 
-
-
                             <div className="cardOld">
                                 <img className="cardOld_img" src="img/cupcake.jpg" />
                                 <div className="cardOld_textos">
                                     <p className="card_antetitulo">Gourmand</p>
                                     <h3 className="cardOld_titulo">Cupcake<i className="punto">.</i></h3>
                                     <p className="card_parrafo">Combinación de notas gourmand azucaradas, canela y vainilla.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/honolulu.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Citrico</p>
-                                    <h3 className="cardOld_titulo">Honolulu<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Blend tropical con corazon de coconut y un mix de frutas citricas.
                                     </p>
                                 </div>
                             </div>
@@ -198,15 +137,6 @@ function OldCatalog() {
                                 </div>
                             </div>
 
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/petit.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Citrico</p>
-                                    <h3 className="cardOld_titulo">Petit<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Fragancia suave, con ligeras notas citricas y flores de azahar.
-                                    </p>
-                                </div>
-                            </div>
 
                             <div className="cardOld">
                                 <img className="cardOld_img" src="img/pocionfresas.jpg" />
@@ -219,32 +149,12 @@ function OldCatalog() {
                             </div>
 
                             <div className="cardOld">
-                                <img className="cardOld_img" src="img/shanti.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Oriental</p>
-                                    <h3 className="cardOld_titulo">Shanti<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">De familia oriental, dulce y cremoso. Combina maderas del oriente con flores del champac. Ideal para espacios de meditacion y relajación.
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/suave.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Oceanico</p>
-                                    <h3 className="cardOld_titulo">Suave<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Perfumito a suavizante textil, le da ese toque fresh y limpio a tus prendas.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="cardOld">
                                 <img className="cardOld_img" src="img/surfbreeze.jpg" />
                                 <div className="cardOld_textos">
                                     <p className="card_antetitulo">Gourmand</p>
                                     <h3 className="cardOld_titulo">Surf Breeze<i className="punto">.</i></h3>
                                     <p className="card_parrafo">
+                                        Blend de frutos dulces y avainillados combinados con coconut y caramelo.
                                     </p>
                                 </div>
                             </div>
@@ -269,15 +179,7 @@ function OldCatalog() {
                                 </div>
                             </div>
 
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/tiramisu.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Gourmand</p>
-                                    <h3 className="cardOld_titulo">Tiramisu<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Café y crema de vainilla. Gourmand dulce y cremoso.
-                                    </p>
-                                </div>
-                            </div>
+
 
                             <div className="cardOld">
                                 <img className="cardOld_img" src="img/viviane.jpg" />
@@ -295,7 +197,7 @@ function OldCatalog() {
                     </div>
                 </section>
 
-                
+
 
                 <section className="proyectos">
                     <div className="containerOld">
@@ -390,7 +292,7 @@ function OldCatalog() {
                     </div>
                 </section>
 
-                
+
 
                 <section className="servicios">
                     <div className="containerOld">
@@ -484,7 +386,7 @@ function OldCatalog() {
                     </div>
                 </section>
 
-            
+
 
                 <section className="proyectos">
                     <div className="containerOld">
@@ -525,7 +427,7 @@ function OldCatalog() {
                     </div>
                 </section>
 
-                
+
 
                 <section className="servicios">
                     <div className="containerOld">
@@ -556,27 +458,7 @@ function OldCatalog() {
                                 </div>
                             </div>
 
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/asana.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Oriental</p>
-                                    <h3 className="cardOld_titulo">Asana<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Fragancia oriental, citrica y especiada de cascaras de naranja, ambar y nag champa.
-                                    </p>
 
-                                </div>
-                            </div>
-
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/blueberrycake.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Gourmand</p>
-                                    <h3 className="cardOld_titulo">Blueberry Cake<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Blend gourmand de chocolate y arandanos silvestres.
-                                    </p>
-
-                                </div>
-                            </div>
 
                             <div className="cardOld">
                                 <img className="cardOld_img" src="img/bohemian.jpg" />
@@ -584,6 +466,17 @@ function OldCatalog() {
                                     <p className="card_antetitulo">Floral amaderado</p>
                                     <h3 className="cardOld_titulo">Bohemian<i className="punto">.</i></h3>
                                     <p className="card_parrafo">Fragancia Floral, leñosa y avainillada con fuertes notas de vainilla y palo de rosa que le dan una identidad unica.
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <div className="cardOld">
+                                <img className="cardOld_img" src="img/honolulu.jpg" />
+                                <div className="cardOld_textos">
+                                    <p className="card_antetitulo">Citrico</p>
+                                    <h3 className="cardOld_titulo">Honolulu<i className="punto">.</i></h3>
+                                    <p className="card_parrafo">Coconut combinado con un mix de frutas cítricas..
                                     </p>
 
                                 </div>
@@ -644,16 +537,7 @@ function OldCatalog() {
                                 </div>
                             </div>
 
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/corazonada.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Frutal Gourmand</p>
-                                    <h3 className="cardOld_titulo">Corazonada<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Frutos rojos, caramelo y almizcle cremoso, una de nuestras gourmand preferidas!
-                                    </p>
-
-                                </div>
-                            </div>
+              
 
                             <div className="cardOld">
                                 <img className="cardOld_img" src="img/cupcake.jpg" />
@@ -661,16 +545,6 @@ function OldCatalog() {
                                     <p className="card_antetitulo">Gourmand</p>
                                     <h3 className="cardOld_titulo">Cupcake<i className="punto">.</i></h3>
                                     <p className="card_parrafo">Combinación de notas gourmand azucaradas, canela y vainilla.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/honolulu.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Citrico</p>
-                                    <h3 className="cardOld_titulo">Honolulu<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Blend tropical con corazon de coconut y un mix de frutas citricas.
                                     </p>
                                 </div>
                             </div>
@@ -684,7 +558,6 @@ function OldCatalog() {
                                     </p>
                                 </div>
                             </div>
-
 
 
                             <div className="cardOld">
@@ -709,31 +582,11 @@ function OldCatalog() {
                             </div>
 
                             <div className="cardOld">
-                                <img className="cardOld_img" src="img/petit.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Citrico</p>
-                                    <h3 className="cardOld_titulo">Petit<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">Fragancia suave, con ligeras notas citricas y flores de azahar.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="cardOld">
                                 <img className="cardOld_img" src="img/pocionfresas.jpg" />
                                 <div className="cardOld_textos">
                                     <p className="card_antetitulo">Frutal</p>
                                     <h3 className="cardOld_titulo">Pocion de fresas<i className="punto">.</i></h3>
                                     <p className="card_parrafo">Combina la dulzura de las fresas del bosque con el calido y cremoso aroma del Coconut.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="cardOld">
-                                <img className="cardOld_img" src="img/shanti.jpg" />
-                                <div className="cardOld_textos">
-                                    <p className="card_antetitulo">Oriental</p>
-                                    <h3 className="cardOld_titulo">Shanti<i className="punto">.</i></h3>
-                                    <p className="card_parrafo">De familia oriental, dulce y cremoso. Combina maderas del oriente con flores del champac. Ideal para espacios de meditacion y relajación.
                                     </p>
                                 </div>
                             </div>
@@ -778,17 +631,11 @@ function OldCatalog() {
                                     </p>
                                 </div>
                             </div>
-
-
-
-
-
                         </article>
-
                     </div>
                 </section>
 
-              
+
 
                 <section className="proyectos">
                     <div className="containerOld">

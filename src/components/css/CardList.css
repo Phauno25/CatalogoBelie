@@ -1,0 +1,121 @@
+
+/* CardList = Usada en Textil y Difu */
+
+.cardList {
+
+    width: 355px;
+    height: 410px;
+    margin: 0 1rem 2rem 1rem;
+    box-shadow: var(--sombraBasica);
+    position: relative;
+    background-color: var(--lightNude);
+    border-radius: 5%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+}
+
+.cardList:hover {
+    background-color: var(--blanco);
+    box-shadow: var(--sombraChica);
+}
+
+.cardList:hover .cardList_body_textos h1 {
+    background-color: var(--lightNude);
+    box-shadow: var(--sombraChica);
+}
+
+
+.proximamente::before {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../public/img/Proximamente.jpg');
+    background-size: cover;
+    clip-path: polygon(0 30%, 100% 29%, 100% 100%, 0% 100%);
+    content: "";
+    transition: clip-path 1s ease-in-out;
+}
+
+.proximamente:hover::before {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.cardList_header {
+    width: 100%;
+    height: 1.5rem;
+}
+
+.cardList_body {
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardList_body_imagen {
+    width: 35%;
+    height: 35%;
+    padding: 0.5rem;
+    margin: 0 auto;
+}
+
+.cardList_body_imagen img {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+}
+
+.cardList_body_textos {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.cardList_body_textos h1 {
+    font-family: var(--joseSlab);
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 3.5rem;
+    font-weight: 900;
+    display: block;
+    margin: 0 auto;
+    transition-property: background-color, box-shadow;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+
+}
+
+.cardList_body_textos p {
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+    font-size: 2rem;
+}
+
+.cardList_body h3 {
+    padding: 1rem 1rem 0;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--marron);
+    border-top: solid 2px var(--lightNaranja);
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+.cardList_footer {
+    height: 1rem;
+    width: 100%;
+
+}

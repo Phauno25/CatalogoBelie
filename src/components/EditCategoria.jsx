@@ -3,7 +3,7 @@ import { db } from '../firebase/fireConfig'
 import { doc, updateDoc } from 'firebase/firestore'
 import { Storage } from '../firebase/fireConfig'
 import { ref, uploadBytes, getDownloadURL } from 'firebase/storage'
-import './css/EditProducto.css'
+import './css/EditModal.css'
 function EditCategoria(prop) {
 
     const [nombre, setNombre] = useState(prop.categoria.nombre);

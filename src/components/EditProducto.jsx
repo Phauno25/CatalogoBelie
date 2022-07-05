@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import { db } from '../firebase/fireConfig'
 import { doc, updateDoc } from 'firebase/firestore'
-import './css/EditProducto.css'
+import './css/EditModal.css'
 function EditProducto(prop) {
 
     const [nombre, setNombre] = useState(prop.producto.nombre);
@@ -9,6 +9,7 @@ function EditProducto(prop) {
     const [tipoAroma, setTipoAroma] = useState(prop.producto.tipoAroma);
     const [tipoProducto, setTipoProducto] = useState(prop.producto.tipoProducto);
     const [publicado, setPublicado] = useState(prop.producto.publicado);
+    
     const [errNombre, setErrNombre] = useState("");
     const [errDescripcion, setErrDescripcion] = useState("");
     const [errTipoAroma, setErrTipoAroma] = useState("");

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import "./css/Register.css"
 import { Auth } from "../firebase/fireConfig"
 import { signInWithEmailAndPassword } from "firebase/auth"
+import './css/Login.css'
 
 function Login() {
 
@@ -56,10 +56,10 @@ function Login() {
     return (
         <div className='register_container'>
 
-            <div className='register_form'>
+            <div className='w50'>
 
                 <div className="cardForm w80">
-                    <form className='registerForm' method="post" onSubmit={(e) => logUser(e)}>
+                    <form className='w90' method="post" onSubmit={(e) => logUser(e)}>
                         <h1>Iniciar Sesión.</h1>
                         <p>Accedé para editar el contenido del Catalogo Belié</p>
                         <hr />
@@ -76,9 +76,14 @@ function Login() {
                         <div className='row'>
                             <button className='submit' type="submit">Iniciar Sesion</button>
                         </div>
-                        <div className={errLog ? "logError" : ""}>
-                            <span>{errLog}</span>
-                        </div>
+                        {
+                            errLog ?
+                                <div className="logError">
+                                    <span>{errLog}</span>
+                                </div>
+                                :
+                                ""
+                        }
                     </form>
                 </div>
 

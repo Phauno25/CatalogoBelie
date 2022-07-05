@@ -132,7 +132,7 @@ function Main() {
                     <h1>Catalogo Belie 2022</h1>
                     <ul className="links">
                         <li><a href="#Categorias" className="link">Catalogo</a></li>
-                        <li><a href="#Categorias" className="link link_active">Ir a la Tienda</a></li>
+                        <li><a href="https://beliearomas.com" className="link link_active">Ir a la Tienda</a></li>
                         {usuario ? <li><a href="/" onClick={(e) => cerrarSesion(e)} className="link">Cerrar Sesión</a></li> : ""}
                     </ul>
                 </nav>
@@ -148,7 +148,7 @@ function Main() {
 
             <section className="wrapper vh100 renovation_textos">
 
-                <div container=".page-content" base-size="containerSize" smooth-parallax="" start-movement=".05" end-position-x="1.3" >
+                <div>
                     <h1>¡Nos Renovamos!</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam, ratione eum adipisci
                         illo assumenda, cupiditate non reprehenderit vitae magni reiciendis recusandae maxime laudantium
@@ -169,7 +169,7 @@ function Main() {
                     </div>
 
                 </div>
-                <div className="container w80 space_around  ">
+                <div className="container w80 space_around" data-aos="fade-up">
 
                     {    // ----------------------- RENDER DE CATEGORIAS ----------------------------//
                         listaCat.map(item =>
@@ -188,7 +188,7 @@ function Main() {
             <section id="Perfuminas" className="bg_blob_violeta">
                 <div className="section_bar bg_violeta h3rem"></div>
                 <div className="container w100 space_center">
-                    <div className="catalogo_textos w50">
+                    <div className="catalogo_textos">
                         <h1>Perfumes Textiles</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente animi assumenda, odio porro unde
                             rem placeat cumque, quibusdam sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
@@ -217,10 +217,10 @@ function Main() {
                 </div>
             </section>
 
-            <section className="bg_blob_rosa">
+            <section id="Difusores" className="bg_blob_rosa">
                 <div className="section_bar bg_rosa h3rem"></div>
                 <div className="container W100 space_center">
-                    <div className="catalogo_textos w50">
+                    <div className="catalogo_textos">
                         <h1>Difusores de Varillas</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente animi assumenda, odio porro unde
                             rem placeat cumque, quibusdam sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
@@ -228,7 +228,7 @@ function Main() {
                         </p>
                     </div>
                 </div>
-                <div id="Difusores" className="container space_evenly">
+                <div className="container space_evenly">
 
                     {  // ----------------------- RENDER DE DIFUSORES ----------------------------//
                         listaProd.map(item =>
@@ -248,10 +248,10 @@ function Main() {
                 </div>
             </section>
 
-            <section className="bg_blob_amarillo">
+            <section id="Velas" className="bg_blob_amarillo">
                 <div className="section_bar bg_amarillo h3rem"></div>
                 <div className="container W100 space_center">
-                    <div className="catalogo_textos w50">
+                    <div className="catalogo_textos">
                         <h1>Velas de soja aromáticas.</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente animi assumenda, odio porro unde
                             rem placeat cumque, quibusdam sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
@@ -259,7 +259,7 @@ function Main() {
                         </p>
                     </div>
                 </div>
-                <div id="Velas" className="container space_evenly bg_blob_amarillo">
+                <div className="container space_evenly bg_blob_amarillo">
 
                     {   // ----------------------- RENDER DE VELAS ----------------------------//
                         listaProd.map(item =>
@@ -280,10 +280,10 @@ function Main() {
 
             </section>
 
-            <section className="bg_blob_azul">
+            <section id="BathTime" className="bg_blob_azul">
                 <div className="section_bar bg_azul h3rem"></div>
                 <div className="container W100 space_center">
-                    <div className="catalogo_textos w50">
+                    <div className="catalogo_textos">
                         <h1>Espumas de Baño</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente animi assumenda, odio porro unde
                             rem placeat cumque, quibusdam sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
@@ -291,7 +291,7 @@ function Main() {
                         </p>
                     </div>
                 </div>
-                <div id="BathTime" className="container space_evenly">
+                <div className="container space_evenly">
 
                     {   // ----------------------- RENDER DE ESPUMAS ----------------------------//
                         listaProd.map(item =>

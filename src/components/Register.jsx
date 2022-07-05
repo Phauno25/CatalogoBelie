@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import "./css/Register.css"
 import { Auth } from "../firebase/fireConfig"
 import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from "firebase/auth"
+import './css/Login.css'
 
 function Register() {
 
@@ -68,15 +68,15 @@ function Register() {
     return (
         <div className='register_container'>
 
-            <div className='register_form'>
+            <div className="w50">
 
                 <div className="cardForm W80">
-                    <form className='registerForm' method="post" onSubmit={(e) => registrarUser(e)}>
+                    <form className="w90 p2" method="post" onSubmit={(e) => registrarUser(e)}>
                         <h1>Creá tu cuenta.</h1>
-                        <p>Ingresa tu mail para ser administrador del catálogo Belie.</p>
+                        <p className="p1v">Ingresa tu mail para ser administrador del catálogo Belie.</p>
                         <hr />
-                        <div className='row'>
-                            <label htmlFor="nombre">¿Cual es tu nombre?:</label>
+                        <div className="row">
+                            <label className='w100' htmlFor="nombre">¿Cual es tu nombre?:</label>
                             <input className={errNombre ? "inputError" : "rowInput"} type="text" name="nombre" onChange={(e) => validarNombre(e.target.value)} />
                             <span htmlFor="pass">{errNombre}</span>
                         </div>

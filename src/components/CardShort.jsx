@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './css/CardShort.css'
 function CardShort(props) {
 
     const { nombre, descripcion, publicado,imagen,editar,click } = props

@@ -42,17 +42,19 @@ html {
     color: var(--negro);
     font-size: 62.5%;
     scroll-behavior: smooth;
+    max-width: 100%;
 }
 
 body {
     font-family: var(--joseSans);
     font-size: 1.6rem;
-
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
+
 h1 {
     font-size: 3.2rem;
 }
@@ -261,21 +263,24 @@ a:visited {
     margin: 0 5% 0 0;
 }
 
-.link{
+.link {
     display: block;
     width: 100%;
     height: 100%;
     padding: 0 1rem;
     transition: background-color 0.3s ease-out;
 }
-.link_active{ 
+
+.link_active {
     font-weight: 700;
     background-color: var(--lightVioleta);
 }
-.link:hover{
+
+.link:hover {
     background-color: var(--lightNaranja);
 }
-.link_active:hover{
+
+.link_active:hover {
     background-color: var(--darkVioleta);
     color: var(--blanco);
 }
@@ -324,7 +329,7 @@ a:visited {
 
 .highlight {
     background-color: #BAA593;
-    padding: 1rem 0.5rem 0rem 0.5rem;
+    padding: 0rem 0.5rem;
     color: var(--blanco);
     font-size: calc(1em * 1.2);
 
@@ -358,19 +363,6 @@ a:visited {
     position: relative;
 }
 
-/*
-
-.renovation_textos::before{
-    position: absolute;
-    transform: rotate(175deg);
-    background-color: var(--marron);
-    top: 0;
-    left: -5%;
-    width: 110%;
-    height: 110%;
-    content: " ";
-    z-index: -1;
-}*/
 .renovation_textos div {
     position: absolute;
     top: 5%;
@@ -379,93 +371,12 @@ a:visited {
     width: 25%;
 }
 
-/*
-.renovation_textos h1{
-    padding: 2rem 0.5rem;
-    font-size: 4rem;
-}
-.renovation_textos p{
-    font-size: 1.5em;
-    padding: 0.5rem;
-}
-.renovation_img{
-    max-width: 80%;
-    height: 5em;
-    object-fit: cover;
-    
-} */
-
-
-
-/*Card Categorias*/
-
-
-.cardCat {
-    width: 320px;
-    height: 400px;
-    background-size: cover;
-    border-radius: 30px;
-    position: relative;
-    display: flex;
-    margin: 0 1rem;
-
-}
-
-.cardCat_header {
-    background-color: var(--marron);
-    border-radius: 30px 30px 0 0;
-    ;
-    overflow: hidden;
-    display: flex;
-}
-
-.cardCat_header_img {
-    width: 50%;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-.cardCat_header_img img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.cardCat_header_info {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.cardCat_header_info div {
-    padding: 1.5em;
-}
-
-.cardCat_header_info div p {
-    margin-top: 1em;
-    color: var(--lightNude);
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-
-.cardCat_header_info a {
-    background-color: var(--lightNaranja);
-    font-size: 2.5rem;
-    font-weight: 700;
-    display: block;
-    padding: 1.7rem;
-    margin: 1rem;
-    text-align: center;
-    box-shadow: 1px 3px 5px #aaa;
-}
 
 /*Catalogo*/
 
 .catalogo_textos {
-
     margin: 4rem auto 3rem auto;
-    padding: 4rem 2rem;
+    padding: 4rem 10%;
 }
 
 .catalogo_textos h1 {
@@ -480,202 +391,159 @@ a:visited {
     text-align: center;
 }
 
+/*Form */
 
-/* CardList = Usada en Textil y Difu */
-
-.cardList {
-
-    width: 355px;
-    height: 410px;
-    margin: 0 1rem 2rem 1rem;
-    box-shadow: var(--sombraBasica);
-    position: relative;
-    /* background-image: linear-gradient(90deg, var(--lightNude) 30%, var(--blanco) 120%); */
-    background-color: var(--lightNude);
+form {
+    border: solid 3px var(--lightNude);
+    margin: 2rem auto 0 auto;
     border-radius: 5%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition-property: background-color, box-shadow;
-    transition-duration: 0.5s;
-    transition-timing-function: ease-out;
+    padding: 2rem 2rem 0 2rem;
 }
 
-.cardList:hover {
+form>h1 {
     background-color: var(--blanco);
-    box-shadow: var(--sombraChica);
+    width: fit-content;
+    display: block;
+    padding: 0.5rem 1rem;
 }
 
-.cardList:hover .cardList_body_textos h1 {
-    background-color: var(--lightNude);
-    box-shadow: var(--sombraChica);
-}
-
-
-.proximamente::before {
-
-    position: absolute;
-    top: 0;
-    left: 0;
+form>hr {
+    border: none;
+    border-top: solid 3px var(--lightNude);
     width: 100%;
-    height: 100%;
-    background-image: url('../img/Proximamente.jpg');
-    background-size: cover;
-    clip-path: polygon(0 30%, 100% 29%, 100% 100%, 0% 100%);
-    content: "";
-    transition: clip-path 1s ease-in-out;
+    margin: 0 auto;
+    padding-bottom: 1rem;
 }
 
-.proximamente:hover::before {
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+form>p {
+    margin-bottom: 3rem;
+    font-size: 1.8rem;
 }
 
-.cardList_header {
-    width: 100%;
-    height: 1.5rem;
-}
-
-.cardList_body {
-    padding: 1.5rem 1rem;
-    font-size: 1.2rem;
-    height: 95%;
+form>div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem auto;
 }
 
-.cardList_body_imagen {
-    width: 35%;
-    height: 35%;
+.logError {
+    width: 80%;
     padding: 0.5rem;
-    margin: 0 auto;
-}
-
-.cardList_body_imagen img {
-    object-fit: cover;
-    max-width: 100%;
-    height: 100%;
-}
-
-.cardList_body_textos {
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.cardList_body_textos h1 {
-    font-family: var(--joseSlab);
-    cursor: pointer;
-    padding: 1rem;
-    font-size: 3.5rem;
-    font-weight: 900;
-    display: block;
-    margin: 0 auto;
-    transition-property: background-color, box-shadow;
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
-
-}
-
-.cardList_body_textos p {
-    margin-top: 1rem;
-    padding: 0 0.5rem;
-    font-size: 2rem;
-}
-
-.cardList_body h3 {
-    padding: 1rem 1rem 0;
-    margin: 0;
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--marron);
-    border-top: solid 2px var(--lightNaranja);
-    text-align: center;
-    width: 60%;
-    margin: 0 auto;
-
-}
-
-.cardList_footer {
-    height: 1rem;
-    width: 100%;
-
-}
-
-
-/* CardShort = Usada en Linea Baño y Velas */
-
-.cardShort {
-    background-image: linear-gradient(90deg, var(--lightNude) 30%, var(--blanco) 120%);
-    width: 360px;
-    border-radius: 5%;
-    box-shadow: var(--sombraBasica);
-    position: relative;
-}
-
-.cardShort_header {
-    margin: 4rem 6rem;
-}
-
-.cardShort_header img {
-    width: 100%;
-    max-height: 5rem;
-    object-fit: cover;
-}
-
-.cardShort_body {
-    padding: 3rem 3rem;
-}
-
-.cardShort_body h2 {
-    margin-left: 1.5rem;
-}
-
-.cardShort_body p {
-    padding: 0 1.5rem;
-}
-
-.cardEdit {
-    display: block;
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.cardEdit i {
-    background-color: var(--marron);
-    color: var(--lightNude);
-    padding: 1rem;
-    border-radius: 50%;
-    box-shadow: var(--sombraBasica);
-    transition: transform 0.3s ease-in-out;
-}
-
-i:hover {
     background-color: var(--lightNaranja);
+    border: solid 3px darkred;
     color: var(--negro);
-    transform: scale(1.1);
+    border-radius: 7px;
 }
 
-.backToCat {
-    text-decoration: none;
-    color: var(--negro);
-    font-size: 2rem;
+.logError span {
+    font-size: 1.5rem;
     font-weight: 600;
-    text-align: right;
-    background-color: var(--lightNude);
-    padding: 2rem;
-    transition: background-color 0.3s ease-in;
-    border-radius: 5%;
 }
 
-.backToCat:hover {
-    color: var(--blanco);
-    background-color: var(--negro);
+.row>label {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.rowInput {
+    padding: 1rem;
+    border: solid 3px var(--lightVioleta);
+    background-color: var(--blanco);
+    border-radius: 7px;
+    outline: none;
+    line-height: 2.5rem;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.rowCheckBox {
+    display: flex;
+}
+
+.rowCheckBoxInput {
+    width: 3rem;
+    height: 3rem;
+    margin: 0 1rem;
+}
+
+.errorChk {
+    color: darkred;
+}
+
+.rowCheckBox label {
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.rowCheckBox span {
+    width: 100%;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+    color: darkred;
+}
+
+.inputError {
+    padding: 1rem 1rem;
+    width: 100%;
+    border-radius: 7px;
+    outline: none;
+    line-height: 2.5rem;
+    font-size: 2rem;
+    border: solid 3px darkred;
+}
+
+.row span {
+    width: 100%;
+    text-align: left;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+    color: darkred;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+input:hover {
+    border: solid 3px var(--lightNaranja);
+}
+
+input:focus {
+    outline: none;
+    border: solid 3px var(--marron);
+}
+
+input[type="file"] {
+    width: 100%;
+
+}
+
+.submit {
+    width: 50%;
+    padding: 2rem 1rem;
+    background-color: var(--lightVerde);
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--negro);
+    border-radius: 7px;
+    transition: background-color 0.2s ease-in-out;
+    border: solid 3px #BADBC0;
+}
+
+.submit:hover {
+    background-color: #BADBC0;
+}
+
+.submit:disabled {
+    border: solid 3px #AAA;
+    color: #777;
+    background-color: var(--nude);
+    text-decoration: line-through
 }
 
 @media only screen and (max-width: 768px) {
@@ -701,5 +569,82 @@ i:hover {
     .header_banner video {
         display: none;
     }
+
+    .row label,
+    .row input {
+        line-height: 1.2rem;
+        font-family: 1rem;
+    }
+
+    .submit {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 541px) {
+
+    nav {
+        padding: 0.5rem;
+        line-height: 2.5rem;
+    }
+
+    nav>h1 {
+        margin: 0 auto;
+    }
+
+    .links {
+        list-style-type: none;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0 0.5rem;
+        transition: background-color 0.3s ease-out;
+    }
+
+    .header_banner_textos {
+        width: 80%;
+        padding: 2rem;
+    }
+
+    .header_banner_textos>h1 {
+        font-size: 4.5rem;
+    }
+
+    .header_banner_textos>p {
+        font-size: 3rem;
+        line-height: 5rem;
+
+    }
+
+}
+
+@media only screen and (max-width: 378px) {
+
+    
+
+    form p {
+        margin-bottom: 1rem;
+    }
+
+    form hr {
+        display: none;
+    }
+
+    .row label,
+    .row input {
+        line-height: 1rem;
+        font-family: 0.8rem;
+    }
+
+    .submit {
+        padding: 1rem;
+        width: fit-content;
+    }
+
 
 }

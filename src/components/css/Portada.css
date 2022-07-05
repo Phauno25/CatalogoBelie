@@ -8,7 +8,7 @@
     top: 20%;
     left: 10%;
     width: fit-content;
-    max-width: 45%;
+    max-width: 60%;
     background-color: var(--blancoTrans);
     padding: 3rem;
 }
@@ -81,22 +81,29 @@
     }
 
     .portada_textos {
+        
         top: 5%;
-        left: 3%;
+        left: 20%;
         margin-right: 7%;
+        padding: 2rem;
+        
     }
 
-    .portada_textos h1 {
+    .portada_textos > h1 {
         font-size: 2rem;
     }
 
-    .portada_textos p {
+    .portada_textos > p {
         font-size: 1.6rem;
         margin-top: 5%;
-        line-height: 1.8rem;
+        line-height: 2rem;
+        
 
     }
-
+    .portada_textos > div{
+        padding: 0;
+        justify-content: center;
+    }
     .portada_btn_catalogo {
         background-color: var(--marron);
         border: solid 3px var(--lightNaranja);

@@ -8,51 +8,25 @@
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
 }
-
 .displayOn{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 .displayOff{
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
-
 .modalContent {
     width: 50%;
     margin: 0 auto;
     background-color: #777;
     box-shadow: var(--sombraBasica);
 }
-.rowCheckBox{
-    display: flex;
-}
-.rowCheckBoxInput{
-    width: 3rem;
-    height: 3rem;
-    margin: 0 1rem;
-}
-.errorChk{
-   color:  darkred;
-}
-.rowCheckBox label{
-    height: 3rem;
-    line-height: 3rem;
-}
-.rowCheckBox span {
-    width: 100%;
-    margin-left: 2rem;
-    margin-bottom: 0.5rem;
-    color: darkred;
-}
-
-.submit:disabled{
-    border: solid 3px #AAA;
-    color: #777;
-    background-color: var(--nude);
-    text-decoration:line-through
-}
-
 .imgCat{
     display: block;
     max-width: 200px;
     max-height: 200px;
+}
+.uploadImg{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
