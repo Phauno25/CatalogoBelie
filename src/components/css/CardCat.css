@@ -69,3 +69,14 @@
     }
 
 }
+
+@media only screen and (max-width: 378px) {
+
+    .cardCat{
+        height: 300px;
+    }
+    .cardCat_body{
+        top: 85%;
+    }
+
+}

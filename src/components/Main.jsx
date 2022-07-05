@@ -150,10 +150,6 @@ function Main() {
 
                 <div>
                     <h1>¡Nos Renovamos!</h1>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam laboriosam, ratione eum adipisci
-                        illo assumenda, cupiditate non reprehenderit vitae magni reiciendis recusandae maxime laudantium
-                        debitis praesentium at accusamus mollitia sit.
-                    </p>
                 </div>
             </section>
 

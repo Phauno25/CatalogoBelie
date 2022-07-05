@@ -42,7 +42,8 @@ html {
     color: var(--negro);
     font-size: 62.5%;
     scroll-behavior: smooth;
-    max-width: 100%;
+    
+
 }
 
 body {
@@ -375,12 +376,12 @@ a:visited {
 /*Catalogo*/
 
 .catalogo_textos {
-    margin: 4rem auto 3rem auto;
+    margin: 3rem auto 2rem auto;
     padding: 4rem 10%;
 }
 
 .catalogo_textos h1 {
-    padding: 2Rem;
+    padding: 1Rem;
     font-size: 6rem;
     text-align: center;
 }
@@ -625,7 +626,9 @@ input[type="file"] {
 
 @media only screen and (max-width: 378px) {
 
-    
+    html{
+        font-size: 40%;
+    }
 
     form p {
         margin-bottom: 1rem;
