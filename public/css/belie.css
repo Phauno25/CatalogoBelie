@@ -376,12 +376,12 @@ a:visited {
 /*Catalogo*/
 
 .catalogo_textos {
-    margin: 3rem auto 2rem auto;
+    margin: 4rem auto 3rem auto;
     padding: 4rem 10%;
 }
 
 .catalogo_textos h1 {
-    padding: 1Rem;
+    padding: 2Rem;
     font-size: 6rem;
     text-align: center;
 }
@@ -630,8 +630,13 @@ input[type="file"] {
         font-size: 40%;
     }
 
-    form p {
-        margin-bottom: 1rem;
+    form{
+        margin-top: 10rem;
+        padding: 3rem 2rem;
+    }
+
+    form > p {
+        padding: 2rem 0 2rem 0;
     }
 
     form hr {
