@@ -69,7 +69,7 @@ function EditProducto(prop) {
     return (
         <div className={`modalEdit ${activarModal && prop.modal ? "displayOn" : "displayOff"}`} onClick={prop.clickCancel}>
             <div className="modalContent">
-                <div className="cardForm bg_nude">
+                <div className="cardModal bg_nude">
                     <form className='registerForm' method="post" onSubmit={(e) => editProducto(e)}>
                         <h1>Editar producto</h1>
                         <p>Escribe sobre los campos a editar.</p>

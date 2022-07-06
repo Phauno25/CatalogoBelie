@@ -547,6 +547,50 @@ input[type="file"] {
     text-decoration: line-through
 }
 
+/*Boton editar y volver arriba */
+.cardEdit {
+    display: block;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cardEdit i {
+    background-color: var(--marron);
+    color: var(--lightNude);
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: var(--sombraBasica);
+    transition: transform 0.3s ease-in-out;
+}
+
+i:hover {
+    background-color: var(--lightNaranja);
+    color: var(--negro);
+    transform: scale(1.1);
+}
+
+.backToCat {
+    text-decoration: none;
+    color: var(--negro);
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: right;
+    background-color: var(--lightNude);
+    padding: 2rem;
+    transition: background-color 0.3s ease-in;
+    border-radius: 5%;
+}
+
+.backToCat:hover {
+    color: var(--blanco);
+    background-color: var(--negro);
+}
+
+
 @media only screen and (max-width: 768px) {
 
     h1 {
