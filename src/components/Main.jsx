@@ -146,21 +146,30 @@ function Main() {
                 </div>
             </header>
 
-            <section className="wrapper vh100 renovation_textos">
+            <section className="wrapper vh100 renovation">
 
-                <div>
+                <div className="renovation_textos">
                     <h1>¡Nos Renovamos!</h1>
+                    <p>A veces los cambios nos dan miedo, puesto que requieren esfuerzo y la incertidumbre nos puede abrumar.
+                        En Belié creemos que los cambios son necesarios ya que representan oportunidades de mejora y crecimiento.
+                        Por eso rediseñamos nuestra imagen, agregando tambien muchos nuevos productos, mejorando su calidad y 
+                        manteniendo nuestra identidad y valores. 
+                    </p>
+                    <div className='renovation_Logo'>
+                        <img src='./img/logoWord.png'>
+                        </img>
+                    </div>
                 </div>
-            </section>
 
+                
+            </section>
             <section id="Categorias" className="wrapper mb4 circlepath">
-                <div className="section_bar bg_nude h3rem"></div>
                 <div className="container w80">
                     <div className="catalogo_textos">
                         <h1>Nuestro Catalogo</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente animi assumenda, odio porro unde
-                            rem placeat cumque, quibusdam sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
-                            laborum quidem.
+                        <p> Desde difusores para tus ambientes hasta productos pensados para tus momentos de relax o
+                            cuidado de tu piel. Recorré nuestro catálogo y conocé todos nuestros nuevos aromas cuidadosamente 
+                            seleccionados para esta nueva etapa. 
                         </p>
                     </div>
 
@@ -261,7 +270,7 @@ function Main() {
                         listaProd.map(item =>
                             item.tipoProducto === "Vela" ?
                                 <CardShort key={item.id} nombre={item.nombre} descripcion={item.descripcion}
-                                    publicado={item.publicado} imagen="./img/RosaCardAmarillo.png"
+                                    publicado={item.publicado} imagen="./img/RosaCardNaranja.png"
                                     editar={usuario ? true : false} producto={item} click={() => setEditarProd(item)}
                                 />
                                 : ""

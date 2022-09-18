@@ -25,7 +25,7 @@
 }
 
 .portada_highlight {
-    background-color: var(--lightNaranja);
+    background-color: var(--skin);
 }
 
 .portada_textos div {
@@ -38,8 +38,8 @@
 }
 
 .portada_btn_catalogo {
-    background-color: var(--marron);
-    border: solid 3px var(--lightNaranja);
+    background-color: var(--darkSkin);
+    border: solid 3px var(--skin);
     font-size: 3rem;
     font-weight: 700;
     color: var(--negro);
@@ -48,8 +48,8 @@
 }
 
 .portada_btn_catalogo:hover {
-    background-color: var(--lightNaranja);
-    border: solid 3px var(--marron);
+    background-color: var(--skin);
+    border: solid 3px var(--darkSkin);
     font-size: 3rem;
     font-weight: 700;
     color: var(--negro);
@@ -105,8 +105,8 @@
         justify-content: center;
     }
     .portada_btn_catalogo {
-        background-color: var(--marron);
-        border: solid 3px var(--lightNaranja);
+        background-color: var(--darkSkin);
+        border: solid 3px var(--skin);
         font-size: 1.8rem;
         font-weight: 700;
         color: var(--negro);
@@ -115,8 +115,8 @@
     }
     
     .portada_btn_catalogo:hover {
-        background-color: var(--lightNaranja);
-        border: solid 3px var(--marron);
+        background-color: var(--skin);
+        border: solid 3px var(--darkSkin);
         color: var(--negro);
     }
 }

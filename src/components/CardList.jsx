@@ -3,11 +3,11 @@ import './css/CardList.css'
 
 function CardList(props) {
 
-    const { nombre, descripcion, tipoAroma, publicado } = props.producto;
+    const { nombre, descripcion, tipoAroma, publicado,tipoProducto } = props.producto;
     const { color, imagen, editar, click } = props
 
     return (
-        <div className={`cardList ${publicado == 1 ? "" : "proximamente"}`}>
+        <div className={`cardList ${publicado == 1 ? "" : tipoProducto == "Perfumina" ? "proximamenteVioleta" : "proximamenteRosa"  }`}>
             <div className={`cardList_header ${color}`}> </div>
             <div className="cardList_body">
                 <div className="cardList_body_imagen">

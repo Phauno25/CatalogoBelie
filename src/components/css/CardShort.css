@@ -3,7 +3,7 @@
 /* CardShort = Usada en Linea Baño y Velas */
 
 .cardShort {
-    background-image: linear-gradient(90deg, var(--lightNude) 30%, var(--blanco) 120%);
+    background-image: linear-gradient(90deg, var(--nude) 30%, var(--blanco) 120%);
     width: 360px;
     border-radius: 5%;
     box-shadow: var(--sombraBasica);
