@@ -4,14 +4,14 @@
 
 .cardShort {
     background-image: linear-gradient(90deg, var(--nude) 30%, var(--blanco) 120%);
-    width: 360px;
+    width: 370px;
     border-radius: 5%;
     box-shadow: var(--sombraBasica);
     position: relative;
 }
 
 .cardShort_header {
-    margin: 4rem 6rem;
+    margin: 4rem 2rem 2rem 2rem;
 }
 
 .cardShort_header img {
@@ -30,6 +30,7 @@
 
 .cardShort_body p {
     padding: 0 1.5rem;
+    text-align: left;
 }
 
 

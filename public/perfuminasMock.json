@@ -1,0 +1,444 @@
+[
+  {
+    "nombre": "AMORE",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Floral",
+    "descripcion": "Fragancia floral alehidica a base de petalos de rosas.",
+    "descripcionLarga": "Amore es un blend con una identidad unica. Su corazon compuesto principalmente de rosas y sus notas de salidas alehídicas lo convierten en una fragancia delicada, apasionada y jabonosa.",
+    "idealPara": {
+      "ideal1": "Quienes aman el aroma a rosas.",
+      "ideal2": "Usar sobre tus prendas o como splash corporal.",
+      "ideal3": "Usar en cualquier momento del dia."
+    },
+    "notasSalida": ["Pomelo"],
+    "notasCorazon": ["Rosa Roja", "Rosa Búlgara", "Lirio"],
+    "notasFondo": ["Madera de Oud", "Ámbar"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "BAMBINO",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Fresco",
+    "descripcion": "Floral, atalcado con base de haba tonka y almizcles blancos.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Quienes buscan un aroma que evoque a ropa limpia.",
+      "ideal2": "Prendas de bebé y de cama.",
+      "ideal3": "Usar durante el día."
+    },
+    "notasSalida": ["Begamota", "Lavanda"],
+    "notasCorazon": ["Notas Atalcadas", "Jazmin Blanco"],
+    "notasFondo": ["Amizcle", "Haba Tonka"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "BOHEMIAN",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Floral",
+    "descripcion": "Fragancia Floral, leñosa y avainillada.",
+    "descripcionLarga": "Bohemian es uno de nuestros primeros blends. Nos cautivó su versatilidad, su base tenuemente maderosa y avainillada y sus exóticas notas de corazon especiadas y florales nos regalan un aroma abstracto, delicado, armonioso y adaptable para cualquier ocasión.",
+    "idealPara": {
+      "ideal1": "Quienes buscan una fragancia dulce y delicada.",
+      "ideal2": "Usar sobre tus prendas o como splash corporal.",
+      "ideal3": "Usar en cualquier momento del dia."
+    },
+    "notasSalida": ["Pomelo"],
+    "notasCorazon": ["Palo de Rosa", "Clavel"],
+    "notasFondo": ["Vainilla", "Cedro", "Ámbar"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "BOTANICA",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Floral",
+    "descripcion": "Blend floral fresco y jabonoso con corazon de gardenias.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Usar sobre tus prendas o como splash corporal.",
+      "ideal2": "Quienes buscan una fragancia exclusivamente floral.",
+      "ideal3": "Usar durante el día."
+    },
+    "notasSalida": ["Heliotropo", "Flor de Durazno"],
+    "notasCorazon": ["Gardenia", "Peonia", "Lirio"],
+    "notasFondo": ["Vainilla", "Sándalo", "Cardamomo"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "CANDY BAR",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Gourmand",
+    "descripcion": "Gourmand frutal dulce, mezcla de malvaviscos y caramelos.",
+    "descripcionLarga": "Si hablamos de perfumes gourmands no podemos evitar hablar del Candy Bar. Su fragancia conlleva infancia ya que nos transporta a un carrito de copos de nieve azucarados en una plaza un dia soleado. Como de esperarse, posee base acaramelada y unas notas frutales intensas que hacen de este blend uno de los mas extrovertidos.",
+    "idealPara": {
+      "ideal1": "Usar en tus prendas, prendas de cama o ambientes.",
+      "ideal2": "Amantes de los aromas dulces.",
+      "ideal3": ""
+    },
+    "notasSalida": ["Lavanda"],
+    "notasCorazon": ["Chicle", "Frutos Rojos"],
+    "notasFondo": ["Vainilla", "Caramelo", "Haba Tonka"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "CIELO",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Fresco",
+    "descripcion": "Armónico blend almendrado con maderas y tintes cítricos.",
+    "descripcionLarga": "Una de las razones por las cuales decidimos bautizar este aroma como CIELO es porque nos transporta a una mañana fresca y soleada, a una brisa de aire puro entrando por la ventana, a la ropa limpia tendida sobre un jardin primaveral. La combinacion armoniosa de notas frescas y ozonicas son las responsables de que este blend nos retrate paisajes tan detallados.",
+    "idealPara": {
+      "ideal1": "Quienes buscan un aroma que evoque a ropa limpia.",
+      "ideal2": "Usar sobre tus prendas, prendas de bebé y de cama.",
+      "ideal3": "Usar durante el día."
+    },
+    "notasSalida": ["Notas Oznicas", "Pomelo", "Begamota"],
+    "notasCorazon": ["Lirio", "Peonia, Pera"],
+    "notasFondo": ["Ámbar", "Sándalo"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "COCO BEACH",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Gourmand",
+    "descripcion": "",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "",
+      "ideal2": "",
+      "ideal3": ""
+    },
+    "notasSalida": ["Notas Oznicas", "Pomelo", "Begamota"],
+    "notasCorazon": ["Lirio", "Peonia, Pera"],
+    "notasFondo": ["Ámbar", "Sándalo"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "CORAZONADA",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Gourmand",
+    "descripcion": "Frutos rojos, azucar tostada y almizcle cremoso.",
+    "descripcionLarga": "Uno de nuestros primeros blends y quizas tambien nuestro favorito. Una fragancia intensa y apasionada, con un corazon cremoso de frutos rojos y una base acaramelada y tenuemente amizclada. Un aroma dulce, firme y seductor que no pasa desapecibido incluso ante narices distraidas. ",
+    "idealPara": {
+      "ideal1": "Usar sobre tus prendas o como splash corporal.",
+      "ideal2": "Las personas que buscan un aroma de tipo perfume fino.",
+      "ideal3": "Amantes de los aromas dulces."
+    },
+    "notasSalida": ["Miel", "Nardo", "Clavo de Olor"],
+    "notasCorazon": ["Frutos Rojos", "Madreselva"],
+    "notasFondo": ["Amizcle", "Ambar", "Caramelo"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "CREMA DE CASTAÑAS",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Frutal",
+    "descripcion": "Fresco y armónico blend almendrado con maderas y tintes cítricos.",
+    "descripcionLarga": "Un aroma perfectamente balanceado por donde se lo sienta, en el encontramos una frescura floral tipica que enseguida se fusiona con una nota frutal indecifrable, enseguida empieza a sentirse su corazon de castañas, almendras y nueces y un tenue amaderado que no le quita al aroma toda la frescura que posee. Un aroma que nos transmite equilibrio, plenitud y armonía. ",
+    "idealPara": {
+      "ideal1": "Usar en todo tipo de prendas o como splash corporal.",
+      "ideal2": "Quienes buscan una fragancia de tipo perfume fino.",
+      "ideal3": "Usar en cualquier momento del día."
+    },
+    "notasSalida": ["Bergamota", "Limón", "Lavanda"],
+    "notasCorazon": ["Notas Verdes", "Ylang Ylang", "Jazmin"],
+    "notasFondo": ["Castañas y Almendras", "Amizcle", "Musgo de Roble"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "CRISTAL",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Fresco",
+    "descripcion": "Notas frescas florales y ozónicas.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Quienes buscan un aroma que evoque a ropa limpia.",
+      "ideal2": "Amantes de los aromas frescos.",
+      "ideal3": "Usar durante el día."
+    },
+    "notasSalida": ["Notas Marinas", "Notas Ozonicas", "Lavanda"],
+    "notasCorazon": ["Neroli", "Lirio", "Orquidea"],
+    "notasFondo": ["Musgo de Roble"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "DULCERIA",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Frutal",
+    "descripcion": "Blend exótico de combina notas de champagne con frutas y flores.",
+    "descripcionLarga": "Mucha gente cree que si un aroma tiene notas a champagne, whisky o algun aperitivo van a tener olor a 'borracho'. No pueden estar más equivocados. Y DULCERIA nace para destronar esa creencia. Notas frutales y base maderosa suave forman fuerzas en uno de los aromas mas exóticos y deliciosos que podemos tener.",
+    "idealPara": {
+      "ideal1": "Quienes buscan una fragancia exótica.",
+      "ideal2": "Usar sobre tus prendas.",
+      "ideal3": "Usar en todo momento."
+    },
+    "notasSalida": ["Flor de Jamaica", "Naranja"],
+    "notasCorazon": ["Uvas blancas y negras", "Maracuyá", "Ciruelo"],
+    "notasFondo": ["Vainilla", "Caramelo", "Amizcle"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "HONOLULU",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Cítrico",
+    "descripcion": "Coconut combinado con un mix de frutas cítricas.",
+    "descripcionLarga": "Cuando sentimos por primera vez el resultado de este blend, nos transportó a una playa caribeña, con palmeras altas, arena blanca, brisa cálida y tragos de colores. Su combinacion de cítricos suavizados por la cremosidad del coco y su base ligeramente ambarina son las notas principales que lo componen. No conocemos hawai, pero tenemos la esperanza de que huela como este aroma. Jaja! ",
+    "idealPara": {
+      "ideal1": "Usar en tus prendas, prendas de cama o ambientes.",
+      "ideal2": "Quienes buscan un aroma energizante.",
+      "ideal3": "Usar durante el dia."
+    },
+    "notasSalida": ["Bergamota", "Limon", "Lima"],
+    "notasCorazon": ["Coco", "Lemongrass", "Notas Verdes"],
+    "notasFondo": ["Patchouli", "Ambar", "Benjui"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "INSOLENCE",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Floral",
+    "descripcion": "Blend floral, fresco y ligeramente oriental.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Usar en todo tipo de prendas o como splash corporal.",
+      "ideal2": "",
+      "ideal3": "Usar en todo momento."
+    },
+    "notasSalida": ["Pomelo", "Heliotropo"],
+    "notasCorazon": ["Iris", "Frutos Rojos", "Violetas"],
+    "notasFondo": ["Sándalo", "Amizcle", "Haba Tonka"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "MANTRA",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Oriental",
+    "descripcion": "Base de maderas orientales con flores frescas y dulces.",
+    "descripcionLarga": "Los aromas orientales tienen esa mística de ser facilmente identificables y a la vez ser muy diferentes unos de otros. Tal es el caso de este aroma, que con un corazon de Ylang Ylang y Jazmin combinado con bases de maderas orientales y especias logran un aroma tan unico como exquisito. No olvidemos que tambien al tener notas de incienso es útil para repeler las malas energías.",
+    "idealPara": {
+      "ideal1": "Quienes buscan una fragancia exótica.",
+      "ideal2": "Usar sobre tus prendas, prendas de cama o ambientes.",
+      "ideal3": "Repeler o limpiar malas energías."
+    },
+    "notasSalida": ["Mandarina", "Anís estrellado"],
+    "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
+    "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "OH LA LA",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Floral",
+    "descripcion": "Blend floral fresco y ligeramente oriental.",
+    "descripcionLarga": "Una fragancia pensada para las narices que buscan una piramide olfativa poco comun. Oh La La combina la frecura de flores parisinas como notas de corazon y las combina con maderas y especias orientales logrando asi una fragancia tan deliciosa como indecifrable. ",
+    "idealPara": {
+      "ideal1": "Usar sobre tus prendas o como splash corporal.",
+      "ideal2": "Quienes buscan una fragancia exótica.",
+      "ideal3": "Usar en todo momento."
+    },
+    "notasSalida": ["", "", ""],
+    "notasCorazon": ["", "", ""],
+    "notasFondo": ["", "", ""],
+    "publicado": "1"
+  },
+  {
+    "nombre": "PITANGA CORAL",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Frutal",
+    "descripcion": "Blend tropical a base de pitanga, maderas y flores caribeñas.",
+    "descripcionLarga": "Todos alguna vez en la vida deberiamos por lo menos usar un perfume a base de pitanga. Esta baya autoctona tiene un aroma frutal muy personal y atractivo. En este blend, la pitanga es combinada con bases avainilladas y notas frescas florales logrando un perfume veraniego, fresco y jovial. Evoca al sol, la playa y los dias cálidos.",
+    "idealPara": {
+      "ideal1": "Usar en todo tipo de prendas.",
+      "ideal2": "Quienes buscan un aroma que evoque a playa o verano.",
+      "ideal3": "Usar durante el dia."
+    },
+    "notasSalida": ["Bergamota", "Pomelo", "Pitanga"],
+    "notasCorazon": ["Durazno", "Jazmin", "Lirio"],
+    "notasFondo": ["Sándalo", "Cedro"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "PLAYA",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Frutal",
+    "descripcion": "Blend tropical avainillado con corazón de coco y frutos secos.",
+    "descripcionLarga": "En el mundo de los aromas, hay combinaciones muy populares que siempre funcionan, como lo es la vainilla con el coco (Si te gusta, te recomendamos nuestro Coco Beach ;) ), la naranja y el jengibe, el coco con la lima y mas. Este blend se forma de una combinacion popular de frutos secos con especias avainilladas y le agregamos maderas dulces y coco para tener un aroma muy familiar y dulce.",
+    "idealPara": {
+      "ideal1": "Usar en todo tipo de prendas.",
+      "ideal2": "Quienes buscan un aroma que evoque a playa o verano.",
+      "ideal3": "Usar en todo momento."
+    },
+    "notasSalida": ["Begamota", "Limón", "Mandarina"],
+    "notasCorazon": ["Mango", "Coco", "Jengibre", "Nueces y Almendras"],
+    "notasFondo": ["Vainilla", "Vetiber", "Caramelo"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "POMELADA",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Cítrico",
+    "descripcion": "Fragancia de base citrica conmbinadas con azahar y pomelo.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Usar en todo tipo de prendas o ambientes.",
+      "ideal2": "Quienes buscan un aroma energizante.",
+      "ideal3": "Usar durante el dia."
+    },
+    "notasSalida": ["Azahar", "Pomelo", "Limón"],
+    "notasCorazon": ["Romero", "Madreselva"],
+    "notasFondo": ["Ámbar", "Caramelo"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "PUREZA",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Floral",
+    "descripcion": "Fragancia compuesta por bouquet de jasmines, maderas y alehidos.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Usar en todo tipo de prendas.",
+      "ideal2": "Quienes buscan una fragancia de tipo perfume fino.",
+      "ideal3": "Usar en cualquier momento del dia."
+    },
+    "notasSalida": ["", "", ""],
+    "notasCorazon": ["", "", ""],
+    "notasFondo": ["", "", ""],
+    "publicado": "1"
+  },
+  {
+    "nombre": "RITUAL",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Amaderado",
+    "descripcion": "Exquisito blend de base amaderada con salida acuosa y toques citricos.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "",
+      "ideal2": "",
+      "ideal3": ""
+    },
+    "notasSalida": ["Notas Marinas", "Azahar", "Bergamota"],
+    "notasCorazon": ["Violeta"],
+    "notasFondo": ["Cedro", "Benjui", "Sándalo"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "ROSEDAL",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Floral",
+    "descripcion": "Blend de rosas rojas, aterciopeladas, seductoras.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Usar en todo tipo de prendas o como splash corporal.",
+      "ideal2": "Quienes buscan un aroma seductor.",
+      "ideal3": "Quienes aman el aroma a rosas."
+    },
+    "notasSalida": ["Pera"],
+    "notasCorazon": ["Rosa Bulgara", "Rosa Blanca", "Rosa Roja"],
+    "notasFondo": ["Vainilla", "Ámbar"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "SIRENA",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Fresco",
+    "descripcion": "Blend acuoso que evoca toda la esencia del mar y su brisa.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Usar sobre tus prendas o prendas de cama.",
+      "ideal2": "Quienes buscan un aroma oceánico.",
+      "ideal3": ""
+    },
+    "notasSalida": ["Notas Marinas", "Nenúfar", "Menta"],
+    "notasCorazon": ["Cardamomo", "Lirio", "Orquidea"],
+    "notasFondo": ["Vetiber", "Benjui"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "TALISMAN",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Oriental",
+    "descripcion": "Combinación exquisita de inciensos, especias y flores orientales.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Usar sobre tus prendas o ambientes.",
+      "ideal2": "Quienes buscan una fragancia exótica.",
+      "ideal3": "Repeler o limpiar malas energías."
+    },
+    "notasSalida": ["Naranja"],
+    "notasCorazon": ["Nag Champa", "Pimienta", "Jazmin"],
+    "notasFondo": ["Sándalo", "Mirra", "Madera de Oud"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "TE DE TILO",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Floral",
+    "descripcion": "Blend de notas herbales y frecas con corazón de tilo.",
+    "descripcionLarga": "Uno ",
+    "idealPara": {
+      "ideal1": "Usar en todo tipo de prendas.",
+      "ideal2": "",
+      "ideal3": "Quienes buscan un aroma relajante."
+    },
+    "notasSalida": ["Menta"],
+    "notasCorazon": ["Tilo", "Hojas de Te", "Pimienta Rosa"],
+    "notasFondo": ["Miel", "Vainilla", "Sándalo"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "VERDEMAR",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Fresco",
+    "descripcion": "Fragancia de indole oceanica, fresca y limpia.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Usar en todo tipo de prendas.",
+      "ideal2": "Quienes buscan un aroma oceánico.",
+      "ideal3": ""
+    },
+    "notasSalida": ["Pera", "Bergamota", "Notas Marinas"],
+    "notasCorazon": ["Jengibre", "Lirio", "Flor de Loto"],
+    "notasFondo": ["Benjui", "Ámbar"],
+    "publicado": "1"
+  },
+  {
+    "nombre": "VIVIANE",
+    "categoria": "Pefuminas",
+    "tipoProducto": "Perfumina",
+    "tipoAroma": "Fresco",
+    "descripcion": "Bouquet de flores que evocan a un jardín en primavera.",
+    "descripcionLarga": "",
+    "idealPara": {
+      "ideal1": "Usar en todo tipo de prendas.",
+      "ideal2": "",
+      "ideal3": ""
+    },
+    "notasSalida": ["Lavanda", "Pomelo", "Lima"],
+    "notasCorazon": ["Fresia", "Cálendula", "Alehídos", "Magnolia"],
+    "notasFondo": ["Amizcle", "Sándalo", "Ámbar"],
+    "publicado": "1"
+  }
+]

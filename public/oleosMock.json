@@ -1,0 +1,53 @@
+[
+    {
+        "nombre": "ROSE",
+        "categoria": "Oleos",
+        "tipoProducto": "Oleo",
+        "tipoAroma": "Floral",
+        "descripcion": "Infinitos pétalos de rosas rojas evocan un aroma femenino y floral.",
+        "descripcionLarga": "Amore es un blend con una identidad unica. Su corazon compuesto principalmente de rosas y sus notas de salidas alehídicas lo convierten en una fragancia delicada, apasionada y jabonosa.",
+        "idealPara": {
+          "ideal1": "Quienes aman el aroma a rosas.",
+          "ideal2": "Usar sobre tus prendas o como splash corporal.",
+          "ideal3": "Usar en cualquier momento del dia."
+        },
+        "notasSalida": ["Pomelo"],
+        "notasCorazon": ["Rosa Roja", "Rosa Búlgara", "Lirio"],
+        "notasFondo": ["Madera de Oud", "Ámbar"],
+        "publicado": "1"
+    },
+    {
+        "nombre": "VANILLE",
+        "categoria": "Oleos",
+        "tipoProducto": "Oleo",
+        "tipoAroma": "Floral",
+        "descripcion": "Cálidas vainillas generan un aroma dulce y delicado.",
+        "descripcionLarga": "Amore es un blend con una identidad unica. Su corazon compuesto principalmente de rosas y sus notas de salidas alehídicas lo convierten en una fragancia delicada, apasionada y jabonosa.",
+        "idealPara": {
+          "ideal1": "Quienes aman el aroma a rosas.",
+          "ideal2": "Usar sobre tus prendas o como splash corporal.",
+          "ideal3": "Usar en cualquier momento del dia."
+        },
+        "notasSalida": ["Pomelo"],
+        "notasCorazon": ["Rosa Roja", "Rosa Búlgara", "Lirio"],
+        "notasFondo": ["Madera de Oud", "Ámbar"],
+        "publicado": "1"
+    },
+    {
+        "nombre": "VERVEINE",
+        "categoria": "Oleos",
+        "tipoProducto": "Oleo",
+        "tipoAroma": "Floral",
+        "descripcion": "Cálidas vainillas generan un aroma dulce y delicado.",
+        "descripcionLarga": "Amore es un blend con una identidad unica. Su corazon compuesto principalmente de rosas y sus notas de salidas alehídicas lo convierten en una fragancia delicada, apasionada y jabonosa.",
+        "idealPara": {
+          "ideal1": "Quienes aman el aroma a rosas.",
+          "ideal2": "Usar sobre tus prendas o como splash corporal.",
+          "ideal3": "Usar en cualquier momento del dia."
+        },
+        "notasSalida": ["Pomelo"],
+        "notasCorazon": ["Rosa Roja", "Rosa Búlgara", "Lirio"],
+        "notasFondo": ["Madera de Oud", "Ámbar"],
+        "publicado": "1"
+    }
+]

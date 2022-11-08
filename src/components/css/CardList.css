@@ -137,11 +137,24 @@
   .modalContent {
     width: 70%;
   }
+  .cardList_body_imagen{
+    padding: 0;
+  }
+
+  .cardList_body_textos > p {
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+    font-size: 2.5rem;
+  }
 }
 
 @media only screen and (max-width: 378px) {
   .cardList {
     width: 70%;
+    height: 280px;
+  }
+  .cardList_body_imagen{
+    padding: 0;
   }
 
   .cardList_body_textos > p {

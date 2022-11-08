@@ -1,25 +1,25 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login";
 import Main from "./components/Main";
 import OldCatalog from "./components/OldCatalog";
-import Portada from "./components/Portada"
+import Portada from "./components/Portada";
 import Register from "./components/Register";
+import Migrador from "./components/Migrador";
 
 function App() {
-
-   
-    return (
+  return (
         <BrowserRouter>
-            <Routes>
-                <Route exact path="/" element={<Portada />} />
-                <Route path="/catalogo" element={<OldCatalog/>} />
-                <Route path="/nuevoCatalogo" element={<Main/>} />
-                <Route path="/register" element={<Register/>} />
-                <Route path="/login" element={<Login/>} />
-            </Routes>
+          <Routes>
+            <Route exact path="/" element={<Portada />} />
+            <Route path="/catalogo" element={<OldCatalog />} />
+            <Route path="/nuevoCatalogo" element={<Main />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/migrador" element={<Migrador />} />
+          </Routes>
         </BrowserRouter>
-    );
+  );
 }
 
 export default App;
