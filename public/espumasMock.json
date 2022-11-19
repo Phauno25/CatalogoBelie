@@ -14,7 +14,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Cable a Tierra",
@@ -31,7 +32,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Mar de Flores",
@@ -48,7 +50,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Carmesí",
@@ -65,7 +68,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
 
   {
@@ -83,7 +87,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Florence",
@@ -100,7 +105,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Limbo",
@@ -117,7 +123,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Rubi",
@@ -134,7 +141,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Bamboo",
@@ -151,7 +159,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Citric Flower",
@@ -168,7 +177,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Crema de Limón",
@@ -185,7 +195,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   }
   
 ]

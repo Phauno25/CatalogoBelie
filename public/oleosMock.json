@@ -14,7 +14,8 @@
         "notasSalida": ["Pomelo"],
         "notasCorazon": ["Rosa Roja", "Rosa Búlgara", "Lirio"],
         "notasFondo": ["Madera de Oud", "Ámbar"],
-        "publicado": "1"
+        "oculto": false,
+        "proximamente": false
     },
     {
         "nombre": "VANILLE",
@@ -31,7 +32,8 @@
         "notasSalida": ["Pomelo"],
         "notasCorazon": ["Rosa Roja", "Rosa Búlgara", "Lirio"],
         "notasFondo": ["Madera de Oud", "Ámbar"],
-        "publicado": "1"
+        "oculto": false,
+        "proximamente": false
     },
     {
         "nombre": "VERVEINE",
@@ -48,6 +50,7 @@
         "notasSalida": ["Pomelo"],
         "notasCorazon": ["Rosa Roja", "Rosa Búlgara", "Lirio"],
         "notasFondo": ["Madera de Oud", "Ámbar"],
-        "publicado": "1"
+        "oculto": false,
+        "proximamente": false
     }
 ]

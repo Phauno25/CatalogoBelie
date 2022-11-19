@@ -11,22 +11,11 @@
       "ideal2": "",
       "ideal3": ""
     },
-    "notasSalida": {
-      "nota1": "nota1",
-      "nota2": "nota2",
-      "nota3": "nota3"
-    },
-    "notasCorazon": {
-      "nota1": "nota1",
-      "nota2": "nota2",
-      "nota3": "nota3"
-    },
-    "notasFondo": {
-      "nota1": "nota1",
-      "nota2": "nota2",
-      "nota3": "nota3"
-    },
-    "publicado": "1"
+    "notasSalida": ["Mandarina", "Anís estrellado"],
+    "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
+    "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Frambuesa Melon",
@@ -43,7 +32,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Limón Caramelo",
@@ -60,7 +50,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Coco",
@@ -77,7 +68,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Lavanda Portuguesa",
@@ -94,7 +86,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Poema",
@@ -111,7 +104,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Pop Corn",
@@ -128,7 +122,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "Nag Champa",
@@ -145,6 +140,7 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   }
 ]

@@ -19,6 +19,8 @@ function Main() {
     setProducto,
     categoria,
     setCategoria,
+    actualizar,
+    setActualizar,
   } = useContext(ContextData);
   const [listaProd, setListaProd] = useState([]);
   const [listaCat, setListaCat] = useState([]);
@@ -45,61 +47,13 @@ function Main() {
     });
     getProductos();
     getCategorias();
-    console.log("tirri");
-  }, [categoria]);
+  }, [actualizar]);
 
   const cerrarSesion = (e) => {
     e.preventDefault();
     Auth.signOut();
     setUsuario(null);
   };
-
-  /* const setEditarProd = (e) => {
-    setModal(true);
-    const producto = {
-      id: e.id,
-      nombre: e.nombre,
-      descripcion: e.descripcion,
-      tipoAroma: e.tipoAroma,
-      tipoProducto: e.tipoProducto,
-      publicado: e.publicado,
-    };
-    setProducto(producto);
-  }; */
-
-  /*  const setMostrarDetalles = (e) => {
-    setDetalle(true);
-    const producto = {
-      id: e.id,
-      nombre: e.nombre,
-      descripcion: e.descripcion,
-      tipoAroma: e.tipoAroma,
-      tipoProducto: e.tipoProducto,
-      publicado: e.publicado,
-    };
-    setProducto(producto);
-  }; */
-  /* 
-  const setEditarCat = (e) => {
-    setModal(true);
-    const categoria = {
-      id: e.id,
-      nombre: e.nombre,
-      descripcion: e.descripcion,
-      tipoCategoria: e.tipoCategoria,
-      imagen: e.imagen,
-    };
-    setCategoria(categoria);
-  }; */
-
-  /*   const cancelModal = (e) => {
-    return e.target == e.currentTarget
-      ? (setModal(false),
-        setTimeout(() => {
-          return setProducto(null), setCategoria(null);
-        }, 1000))
-      : "";
-  }; */
 
   const getProductos = async () => {
     const documentos = await getDocs(collection(db, "productoBelie"));
@@ -108,12 +62,14 @@ function Main() {
       const producto = {
         id: e.id,
         nombre: e.data().nombre,
+        categoria: e.data().categoria,
         descripcion: e.data().descripcion,
         descripcionLarga: e.data().descripcionLarga,
         tipoAroma: e.data().tipoAroma,
         tipoProducto: e.data().tipoProducto,
         idealPara: e.data().idealPara,
-        publicado: e.data().publicado,
+        proximamente: e.data().proximamente,
+        oculto: e.data().oculto,
       };
       nuevoArray.push(producto);
     });
@@ -193,7 +149,7 @@ function Main() {
         </div>
       </header>
 
-      <section className="wrapper vh100 renovation">
+      <section className="wrapper renovation">
         <div className="renovation_textos">
           <h1>¡Nos Renovamos!</h1>
           <p>
@@ -210,7 +166,7 @@ function Main() {
         </div>
       </section>
       <section id="Categorias" className="wrapper mb4 circlepath">
-        <div className="container w80">
+        <div className="container w100">
           <div className="catalogo_textos">
             <h1>Nuestro Catalogo</h1>
             <p>
@@ -371,15 +327,22 @@ function Main() {
             // ----------------------- RENDER DE OLEOS ----------------------------//
             listaProd.map((item) =>
               item.tipoProducto === "Oleo" ? (
+                
+                !item.oculto || (item.oculto && usuario) ? 
+                (
                 <CardShort
                   key={item.id}
                   imagen="./img/RosaCardNude.png"
                   editar={usuario ? true : false}
                   producto={item}
                 />
+                )
+                :
+                console.log(`oculto=${item.oculto}. usuario=${usuario}`)
               ) : (
                 ""
               )
+              
             )
           }
         </div>
@@ -419,11 +382,6 @@ function Main() {
             )
           }
         </div>
-        <div className="d-flex space_end p2">
-          <a href="#Categorias" className="backToCat">
-            Volver arriba.
-          </a>
-        </div>
         <div className="container W100 space_center">
           <div className="catalogo_textos">
             <h1>Sales de Baño</h1>
@@ -453,18 +411,13 @@ function Main() {
             )
           }
         </div>
-        <div className="d-flex space_end p2">
-          <a href="#Categorias" className="backToCat">
-            Volver arriba.
-          </a>
-        </div>
         <div className="container W100 space_center">
           <div className="catalogo_textos">
             <h1>Jabónes Líquidos</h1>
             <p>
               Dale un mimo a tus manos al mismo tiempo que las cuidás. Los
-              jabones liquidos Belie poseen ingredientes hidratantes y poseen un aroma suave que dejan tus manos
-              limpias y radiantes con cada uso.  
+              jabones liquidos Belie poseen ingredientes hidratantes y poseen un
+              aroma suave que dejan tus manos limpias y radiantes con cada uso.
             </p>
           </div>
         </div>

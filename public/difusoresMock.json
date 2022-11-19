@@ -14,7 +14,8 @@
     "notasSalida": ["Pomelo"],
     "notasCorazon": ["Rosa Roja", "Rosa Búlgara", "Lirio"],
     "notasFondo": ["Madera de Oud", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "AMULETO",
@@ -31,7 +32,8 @@
     "notasSalida": ["Begamota", "Lavanda"],
     "notasCorazon": ["Notas Atalcadas", "Jazmin Blanco"],
     "notasFondo": ["Amizcle", "Haba Tonka"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "APEROL SPRITZ",
@@ -48,7 +50,8 @@
     "notasSalida": ["Begamota", "Lavanda"],
     "notasCorazon": ["Notas Atalcadas", "Jazmin Blanco"],
     "notasFondo": ["Amizcle", "Haba Tonka"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "ATLANTIS",
@@ -65,7 +68,8 @@
     "notasSalida": ["Begamota", "Lavanda"],
     "notasCorazon": ["Notas Atalcadas", "Jazmin Blanco"],
     "notasFondo": ["Amizcle", "Haba Tonka"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "BOHEMIAN",
@@ -82,7 +86,8 @@
     "notasSalida": ["Pomelo"],
     "notasCorazon": ["Palo de Rosa", "Clavel"],
     "notasFondo": ["Vainilla", "Cedro", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "CALÉNDULA",
@@ -99,7 +104,8 @@
     "notasSalida": ["Heliotropo", "Flor de Durazno"],
     "notasCorazon": ["Gardenia", "Peonia", "Lirio"],
     "notasFondo": ["Vainilla", "Sándalo", "Cardamomo"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "CANDY BAR",
@@ -116,7 +122,8 @@
     "notasSalida": ["Lavanda"],
     "notasCorazon": ["Chicle", "Frutos Rojos"],
     "notasFondo": ["Vainilla", "Caramelo", "Haba Tonka"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "CARAMEL LATTE",
@@ -133,7 +140,8 @@
     "notasSalida": ["Notas Oznicas", "Pomelo", "Begamota"],
     "notasCorazon": ["Lirio", "Peonia, Pera"],
     "notasFondo": ["Ámbar", "Sándalo"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "COCO BEACH",
@@ -150,7 +158,8 @@
     "notasSalida": ["Notas Oznicas", "Pomelo", "Begamota"],
     "notasCorazon": ["Lirio", "Peonia, Pera"],
     "notasFondo": ["Ámbar", "Sándalo"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "CORAZONADA",
@@ -167,7 +176,8 @@
     "notasSalida": ["Miel", "Nardo", "Clavo de Olor"],
     "notasCorazon": ["Frutos Rojos", "Madreselva"],
     "notasFondo": ["Amizcle", "Ambar", "Caramelo"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "CREMA DE CASTAÑAS",
@@ -184,7 +194,8 @@
     "notasSalida": ["Bergamota", "Limón", "Lavanda"],
     "notasCorazon": ["Notas Verdes", "Ylang Ylang", "Jazmin"],
     "notasFondo": ["Castañas y Almendras", "Amizcle", "Musgo de Roble"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "CRISTAL",
@@ -201,7 +212,8 @@
     "notasSalida": ["Notas Marinas", "Notas Ozonicas", "Lavanda"],
     "notasCorazon": ["Neroli", "Lirio", "Orquidea"],
     "notasFondo": ["Musgo de Roble"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "FORTUNA",
@@ -218,7 +230,8 @@
     "notasSalida": ["Flor de Jamaica", "Naranja"],
     "notasCorazon": ["Uvas blancas y negras", "Maracuyá", "Ciruelo"],
     "notasFondo": ["Vainilla", "Caramelo", "Amizcle"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "ICE TEA",
@@ -235,7 +248,8 @@
     "notasSalida": ["Bergamota", "Limon", "Lima"],
     "notasCorazon": ["Coco", "Lemongrass", "Notas Verdes"],
     "notasFondo": ["Patchouli", "Ambar", "Benjui"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "INSOLENCE",
@@ -252,7 +266,8 @@
     "notasSalida": ["Pomelo", "Heliotropo"],
     "notasCorazon": ["Iris", "Frutos Rojos", "Violetas"],
     "notasFondo": ["Sándalo", "Amizcle", "Haba Tonka"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "JASMINE",
@@ -269,7 +284,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "LIMONETTO",
@@ -286,7 +302,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "LITORAL",
@@ -303,7 +320,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "MANTRA",
@@ -320,7 +338,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "VENECIA",
@@ -337,7 +356,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "NECTAR DE PAPAYA",
@@ -354,7 +374,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "OH LA LA",
@@ -371,7 +392,8 @@
     "notasSalida": ["", "", ""],
     "notasCorazon": ["", "", ""],
     "notasFondo": ["", "", ""],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "PASSION FRUIT",
@@ -388,7 +410,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "POMELO PINK",
@@ -405,7 +428,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "SERENA",
@@ -422,7 +446,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "TALISMAN",
@@ -439,7 +464,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "TE DE TILO",
@@ -456,7 +482,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "TEMPLANZA",
@@ -473,7 +500,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "TROPICO",
@@ -490,7 +518,8 @@
     "notasSalida": ["Mandarina", "Anís estrellado"],
     "notasCorazon": ["Jazmin", "Ylang Ylang", "Nag Champa"],
     "notasFondo": ["Vainilla", "Sándalo", "Maderas de Oriente", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   },
   {
     "nombre": "VIVIANE",
@@ -507,6 +536,7 @@
     "notasSalida": ["Lavanda", "Pomelo", "Lima"],
     "notasCorazon": ["Fresia", "Cálendula", "Alehídos", "Magnolia"],
     "notasFondo": ["Amizcle", "Sándalo", "Ámbar"],
-    "publicado": "1"
+    "oculto": false,
+    "proximamente": false
   }
 ]

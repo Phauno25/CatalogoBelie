@@ -68,10 +68,13 @@ function Register() {
     return (
         <div className='register_container'>
 
-            <div className="w50">
-
-                <div className="cardForm W80">
-                    <form className="w90 p2" method="post" onSubmit={(e) => registrarUser(e)}>
+            <div className='register_blob'>
+            <div>
+                <h1 className='BelieTitulo centroT'>Belié</h1>
+                <h3 className='BelieSubtitulo centroT'>AROMAS</h3>
+            </div>
+             <div>
+                <form className="cardForm" method="post" onSubmit={(e) => registrarUser(e)}>
                         <h1>Creá tu cuenta.</h1>
                         <p className="p1v">Ingresa tu mail para ser administrador del catálogo Belie.</p>
                         <hr />
@@ -96,22 +99,18 @@ function Register() {
                             <span htmlFor="pass2">{errPass2}</span>
                         </div>
                         <div className='row'>
-                            <button className='submit' type="submit">Registrarse</button>
+                            <button className='loginBtn' type="submit">Registrarse</button>
                         </div>
                     </form>
                 </div>
-
-            </div>
-
-            <div className='register_blob'>
-                <h1 className='BelieTitulo centroT'>Belié</h1>
-                <h3 className='BelieSubtitulo centroT'>AROMAS</h3>
-            </div>
+</div>
 
 
 
 
-        </div>
+
+
+</div>
 
     )
 

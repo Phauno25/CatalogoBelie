@@ -14,12 +14,12 @@ function CardList(props) {
     setCategoria,
   } = useContext(ContextData);
 
-  const { nombre, descripcion, tipoProducto, tipoAroma, publicado } =
+  const { nombre, descripcion, tipoProducto, tipoAroma, proximamente,oculto } =
     props.producto;
   const { color, imagen, editar } = props;
 
   const mostrarDetalle = () => {
-    if (publicado) {
+    if (proximamente) {
       setProducto(props.producto);
       setDetalleProducto(true);
     }
@@ -33,13 +33,14 @@ function CardList(props) {
   return (
     <div
       className={`cardList ${
-        publicado == 1
+        !proximamente
           ? ""
           : tipoProducto == "Perfumina"
           ? "proximamenteVioleta"
           : "proximamenteRosa"
       }`}
     >
+      {oculto && editar ?(<h2 className="cardList_oculto">OCULTO</h2>) : ("")}
       <div className={`cardList_header ${color}`}> </div>
       <div className="cardList_body">
         <div className="cardList_body_imagen">
@@ -47,10 +48,10 @@ function CardList(props) {
         </div>
         <div className="cardList_body_textos">
           <h1 className="centroT" onClick={() => mostrarDetalle()}>
-            {publicado == 1 ? nombre : "Proximamente"}
+            {!proximamente ? nombre : "Proximamente"}
           </h1>
           <p className="centroT">
-            {publicado == 1
+            {!proximamente
               ? descripcion
               : "Dentro de muy poco lanzaremos este aroma. Seguinos en las redes para estar al tanto!"}
           </p>
@@ -58,7 +59,7 @@ function CardList(props) {
         <h3 className="centroT">{tipoAroma}</h3>
         {editar ? (
           <button onClick={() => editarProducto()} className="cardEdit">
-            <i className="fa fa-pencil fa-4x"></i>
+            <i className="fa fa-pencil fa-3x"></i>
           </button>
         ) : (
           ""

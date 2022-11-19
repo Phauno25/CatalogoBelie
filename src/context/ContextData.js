@@ -7,7 +7,7 @@ const ContextProvider = ({ children }) => {
   const [detalleProducto, setDetalleProducto] = useState(false);
   const [producto, setProducto] = useState(null);
   const [categoria, setCategoria] = useState(null);
-
+  const [actualizar,setActualizar] = useState(false);
   return (
     <ContextData.Provider
       value={{
@@ -19,6 +19,8 @@ const ContextProvider = ({ children }) => {
         setProducto,
         categoria,
         setCategoria,
+        actualizar,
+        setActualizar
       }}
     >
       {children}

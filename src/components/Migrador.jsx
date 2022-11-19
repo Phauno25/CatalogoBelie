@@ -15,15 +15,17 @@ function Migrador() {
           console.log(item);
           const producto = {
             nombre: item.nombre,
+            categoria: item.categoria,
             tipoProducto: item.tipoProducto,
             tipoAroma: item.tipoAroma,
             descripcion: item.descripcion,
             descripcionLarga: item.descripcionLarga,
             idealPara: item.idealPara,
-            notasSalida: item.notasSalida,
+            notasSaluda: item.notasSalida,
             notasCorazon: item.notasCorazon,
             notasFondo: item.notasFondo,
-            publicado: item.publicado,
+            proximamente: item.proximamente,
+            oculto: item.oculto
           };
           const docref = addDoc(collection(db, "productoBelie"), producto);
           console.log("Generado id:" + docref.id);
@@ -52,7 +54,8 @@ function Migrador() {
             notasSaluda: item.notasSalida,
             notasCorazon: item.notasCorazon,
             notasFondo: item.notasFondo,
-            publicado: item.publicado,
+            proximamente: item.proximamente,
+            oculto: item.oculto
           };
           const docref = addDoc(collection(db, "productoBelie"), producto);
           console.log("Generado id:" + docref.id);
@@ -81,7 +84,8 @@ function Migrador() {
             notasSaluda: item.notasSalida,
             notasCorazon: item.notasCorazon,
             notasFondo: item.notasFondo,
-            publicado: item.publicado,
+            proximamente: item.proximamente,
+            oculto: item.oculto
           };
           const docref = addDoc(collection(db, "productoBelie"), producto);
           console.log("Generado id:" + docref.id);
@@ -110,7 +114,8 @@ function Migrador() {
             notasSaluda: item.notasSalida,
             notasCorazon: item.notasCorazon,
             notasFondo: item.notasFondo,
-            publicado: item.publicado,
+            proximamente: item.proximamente,
+            oculto: item.oculto
           };
           const docref = addDoc(collection(db, "productoBelie"), producto);
           console.log("Generado id:" + docref.id);
@@ -139,7 +144,8 @@ function Migrador() {
             notasSaluda: item.notasSalida,
             notasCorazon: item.notasCorazon,
             notasFondo: item.notasFondo,
-            publicado: item.publicado,
+            proximamente: item.proximamente,
+            oculto: item.oculto
           };
           const docref = addDoc(collection(db, "productoBelie"), producto);
           console.log("Generado id:" + docref.id);

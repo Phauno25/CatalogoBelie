@@ -132,19 +132,41 @@
   height: 1.5rem;
   width: 100%;
 }
+.cardList_oculto{
+  display: block;
+  background-color: var(--negro);
+  color: var(--blanco);
+  width: fit-content;
+  padding: 1rem ;
+  position: absolute;
+  border-radius: 0 0 12px 0;
+  top: 0;
+  left: 0;
+}
 
 @media only screen and (max-width: 768px) {
   .modalContent {
     width: 70%;
   }
+  .cardList{
+    height: fit-content;
+    width: 80%;
+  }
   .cardList_body_imagen{
     padding: 0;
   }
-
-  .cardList_body_textos > p {
+  .cardList_body_textos > h1 {
     margin-top: 1rem;
     padding: 0 0.5rem;
     font-size: 2.5rem;
+  }
+  .cardList_body_textos > p {
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+    font-size: 1.5rem;
+  }
+  .cardList_body > h3 {
+    margin-top: 1rem;
   }
 }
 
@@ -156,11 +178,15 @@
   .cardList_body_imagen{
     padding: 0;
   }
+  
+  .cardList_body_textos > h1 {
+    font-size: 2rem;
+  }
 
   .cardList_body_textos > p {
     margin-top: 1rem;
     padding: 0 0.5rem;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
   .cardList_footer {
     height: 2rem;

@@ -5,7 +5,7 @@ import { ContextData } from "../context/ContextData";
 import "./css/EditModal.css";
 function EditProducto() {
   //context
-  const { producto, setProducto, editModal, setEditModal } =
+  const { producto, setProducto, editModal, setEditModal,actualizar,setActualizar } =
     useContext(ContextData);
 
   //variables del producto
@@ -13,16 +13,19 @@ function EditProducto() {
   const [descripcion, setDescripcion] = useState(producto.descripcion);
   const [descripcionLarga, setDescripcionLarga] = useState(producto.descripcionLarga);
   const [tipoAroma, setTipoAroma] = useState(producto.tipoAroma);
+  const [idealPara, setIdealPara] = useState(producto.idealPara)
   const [tipoProducto, setTipoProducto] = useState(producto.tipoProducto);
-  const [publicado, setPublicado] = useState(producto.publicado);
+  const [proximamente, setProximamente] = useState(producto.proximamente);
+  const [oculto, setOculto] = useState(producto.oculto);
 
   //varibales de validaciones
   const [errNombre, setErrNombre] = useState("");
   const [errDescripcion, setErrDescripcion] = useState("");
+  const [errDescripcionLarga, setErrDescripcionLarga] = useState("");
   const [errTipoAroma, setErrTipoAroma] = useState("");
   const [errTipoProducto, setErrTipoProducto] = useState("");
-  const [errPublicado, setErrPublicado] = useState("");
-
+  const [errProximamente, setErrproximamente] = useState("");
+  const [errOculto, setErrOculto] = useState("");
   //funciones
   const validarNombre = (e) => {
     return e.trim()
@@ -37,8 +40,8 @@ function EditProducto() {
   };
   const validarDescripcionLarga = (e) => {
     return e.trim()
-      ? (setErrDescripcion(""), setDescripcion(e))
-      : (setErrDescripcion("La descripción larga no puede quedar vacía"),
+      ? (setErrDescripcionLarga(""), setDescripcionLarga(e))
+      : (setErrDescripcionLarga("La descripción larga no puede quedar vacía"),
         setDescripcion(e));
   };
   const validarTipoAroma = (e) => {
@@ -52,31 +55,42 @@ function EditProducto() {
       ? (setErrTipoProducto(""), setTipoProducto(e))
       : setErrTipoProducto("El tipo de producto no puede quedar vacío");
   };
-  const validarPublicado = (e) => {
-    return errNombre || errDescripcion || errTipoAroma || errTipoProducto
-      ? setErrPublicado(
+  const validarproximamente = (e) => {
+    return errNombre || errDescripcion || errDescripcionLarga ||errTipoAroma || errTipoProducto
+      ? setErrproximamente(
           "No se puede realizar esta acción si otros campos tienen errores"
         )
-      : (setPublicado(e.target.checked),
-        setErrPublicado(""),
-        console.log(publicado));
+      : (setProximamente(e.target.checked),
+        setErrproximamente(""));
+  };
+  const validarOculto = (e) => {
+    return errNombre || errDescripcion || errDescripcionLarga || errTipoAroma || errTipoProducto
+      ? setErrOculto(
+          "No se puede realizar esta acción si otros campos tienen errores"
+        )
+      : (setOculto(e.target.checked),
+        setErrOculto(""));
   };
 
   const editProducto = async (e) => {
     e.preventDefault();
-    console.log("clicked");
-    if (!errNombre && !errDescripcion && !errTipoAroma && !errTipoProducto) {
+    if (!errNombre && !errDescripcion && !errTipoAroma && !errTipoProducto && !errDescripcionLarga) {
       const docu = doc(db, "productoBelie", producto.id);
       const newDocu = {
         nombre: nombre,
         descripcion: descripcion,
-        descripcion: descripcionLarga,
+        descripcionLarga: descripcionLarga,
         tipoAroma: tipoAroma,
         tipoProducto: tipoProducto,
-        publicado: publicado,
+        idealPara: idealPara,
+        proximamente: proximamente,
+        oculto: oculto
       };
 
       await updateDoc(docu, newDocu).then(alert("Producto modificado ok"));
+      actualizar ? setActualizar(false) : setActualizar(true);
+      setEditModal(false);
+      setProducto(null);
     }
   };
   const ocultarModal = (e) => {
@@ -115,6 +129,7 @@ function EditProducto() {
             <div className="row">
               <label htmlFor="descripcion">Descripcion:</label>
               <textarea
+                rows={3}
                 className={errDescripcion ? "inputError" : "rowInput"}
                 maxLength="140"
                 value={descripcion}
@@ -126,6 +141,7 @@ function EditProducto() {
             <div className="row">
               <label htmlFor="descripcion">Descripcion Larga:</label>
               <textarea
+              rows={6}
                 className={errDescripcion ? "inputError" : "rowInput"}
                 maxLength="140"
                 value={descripcionLarga}
@@ -134,7 +150,8 @@ function EditProducto() {
               />
               <span htmlFor="descripcion">{errDescripcion}</span>
             </div>
-            <div className="row">
+            <div className="row direction-row">
+              <div>
               <label htmlFor="tipoAroma">TipoAroma:</label>
               <input
                 className={errTipoAroma ? "inputError" : "rowInput"}
@@ -144,8 +161,8 @@ function EditProducto() {
                 onChange={(e) => validarTipoAroma(e.target.value)}
               />
               <span htmlFor="tipoAroma">{errTipoAroma}</span>
-            </div>
-            <div className="row">
+              </div>
+              <div>
               <label htmlFor="pass">TipoProducto:</label>
               <input
                 className={errTipoProducto ? "inputError" : "rowInput"}
@@ -155,23 +172,63 @@ function EditProducto() {
                 onChange={(e) => validarTipoProducto(e.target.value)}
               />
               <span htmlFor="pass">{errTipoProducto}</span>
+              </div>
             </div>
-            <div className="rowCheckBox">
-              <label htmlFor="publicado">
-                Publicado:
+            <div className="row">
+            <label htmlFor="idealPara">Ideal Para:</label>
+            <div className="d-flex flex-wrap space-center">
+            <input
+                className={errTipoProducto ? "inputError inputIdealPara" : "rowInput inputIdealPara"}
+                type="text"
+                value={idealPara.ideal1}
+                name="pass"
+                onChange={(e) => validarTipoProducto(e.target.value)}
+              />
+                <input
+                className={errTipoProducto ? "inputError inputIdealPara" : "rowInput inputIdealPara"}
+                type="text"
+                value={idealPara.ideal2}
+                name="pass"
+                onChange={(e) => validarTipoProducto(e.target.value)}
+              />
+                <input
+                className={errTipoProducto ? "inputError inputIdealPara" : "rowInput inputIdealPara"}
+                type="text"
+                value={idealPara.ideal3}
+                name="pass"
+                onChange={(e) => validarTipoProducto(e.target.value)}
+              />
+            </div>
+            </div>
+ 
+            <div className="d-flex p2 flex-row space-evenly">
+              <div>
+              <label htmlFor="proximamente">
+                Proximamente:
                 <input
                   className="rowCheckBoxInput"
                   type="checkbox"
-                  checked={publicado}
-                  name="publicado"
-                  onChange={(e) => validarPublicado(e)}
+                  checked={proximamente == 1}
+                  name="proximamente"
+                  onChange={(e) => validarproximamente(e)}
                 />
               </label>
-
-              <span className="centroT" htmlFor="publicado">
-                {errPublicado}
-              </span>
+              </div>
+              <div>
+              <label htmlFor="oculto">
+                Oculto:
+                <input
+                  className="rowCheckBoxInput"
+                  type="checkbox"
+                  checked={oculto == 1}
+                  name="oculto"
+                  onChange={(e) => validarOculto(e)}/>
+              </label>
+              </div>
             </div>
+            <span className="centroT" htmlFor="proximamente">
+                {errProximamente}
+              </span>
             <div className="row">
               <button
                 disabled={

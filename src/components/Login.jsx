@@ -56,12 +56,16 @@ function Login() {
     return (
         <div className='register_container'>
 
-            <div className='w50'>
+            <div className='register_blob'>
+            <div>
+                <h1 className='BelieTitulo centroT'>Belié</h1>
+                <h3 className='BelieSubtitulo centroT'>AROMAS</h3>
+            </div>
 
-                <div className="cardForm w80">
-                    <form className='w90' method="post" onSubmit={(e) => logUser(e)}>
+                <div>
+                    <form className='cardForm' method="post" onSubmit={(e) => logUser(e)}>
                         <h1>Iniciar Sesión.</h1>
-                        <p>Accedé para editar el contenido del Catalogo Belié</p>
+                        <p>Accedé para editar el contenido del <span className="bg_nude">Catalogo Belié</span></p>
                         <hr />
                         <div className='row'>
                             <label htmlFor="email">Correo Electrónico:</label>
@@ -74,7 +78,7 @@ function Login() {
                             <span htmlFor="pass">{errPass}</span>
                         </div>
                         <div className='row'>
-                            <button className='submit' type="submit">Iniciar Sesion</button>
+                            <button className='loginBtn' type="submit">Iniciar Sesion</button>
                         </div>
                         {
                             errLog ?
@@ -89,10 +93,7 @@ function Login() {
 
             </div>
 
-            <div className='register_blob'>
-                <h1 className='BelieTitulo centroT'>Belié</h1>
-                <h3 className='BelieSubtitulo centroT'>AROMAS</h3>
-            </div>
+            
 
 
 
