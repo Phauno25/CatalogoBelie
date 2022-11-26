@@ -47,7 +47,7 @@ function CardList(props) {
           <img src={imagen} alt={tipoAroma} />
         </div>
         <div className="cardList_body_textos">
-          <h1 className="centroT" onClick={() => mostrarDetalle()}>
+          <h1 className="centroT">
             {!proximamente ? nombre : "Proximamente"}
           </h1>
           <p className="centroT">
