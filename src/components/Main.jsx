@@ -119,7 +119,7 @@ function Main() {
               </a>
             </li>
             <li>
-              <a href="https://beliearomas.com" className="link link_active">
+              <a href="https://beliearomas.com.ar" className="link link_active">
                 Ir a la Tienda
               </a>
             </li>
@@ -139,7 +139,10 @@ function Main() {
           <img src="./img/imgBannerBelie.jpg" alt="banner" />
           <div className="header_banner_textos">
             <h1>
-              Estás a un <span className="highlight">CLICK</span>
+              Estás a un{" "}
+              <a href="#Categorias">
+                <span className="highlight">CLICK</span>
+              </a>
             </h1>
             <p>
               de descubrir tu nueva{" "}
@@ -211,14 +214,18 @@ function Main() {
           {
             // ----------------------- RENDER DE PERFUMINAS ----------------------------//
             listaProd.map((item) =>
-              item.tipoProducto === "Perfumina" ? (
-                <CardList
-                  key={item.id}
-                  color="bg_violeta"
-                  imagen="./img/RosaCardVioleta.png"
-                  editar={usuario ? true : false}
-                  producto={item}
-                />
+              !item.oculto || (item.oculto && usuario) ? (
+                item.tipoProducto === "Perfumina" ? (
+                  <CardList
+                    key={item.id}
+                    color="bg_violeta"
+                    imagen="./img/RosaCardVioleta.png"
+                    editar={usuario ? true : false}
+                    producto={item}
+                  />
+                ) : (
+                  ""
+                )
               ) : (
                 ""
               )
@@ -251,14 +258,18 @@ function Main() {
           {
             // ----------------------- RENDER DE DIFUSORES ----------------------------//
             listaProd.map((item) =>
-              item.tipoProducto === "Difusor" ? (
-                <CardList
-                  key={item.id}
-                  color="bg_rosa"
-                  imagen="./img/RosaCardRosa.png"
-                  editar={usuario ? true : false}
-                  producto={item}
-                />
+              !item.oculto || (item.oculto && usuario) ? (
+                item.tipoProducto === "Difusor" ? (
+                  <CardList
+                    key={item.id}
+                    color="bg_rosa"
+                    imagen="./img/RosaCardRosa.png"
+                    editar={usuario ? true : false}
+                    producto={item}
+                  />
+                ) : (
+                  ""
+                )
               ) : (
                 ""
               )
@@ -289,13 +300,17 @@ function Main() {
           {
             // ----------------------- RENDER DE VELAS ----------------------------//
             listaProd.map((item) =>
-              item.tipoProducto === "Vela" ? (
-                <CardShort
-                  key={item.id}
-                  imagen="./img/RosaCardNaranja.png"
-                  editar={usuario ? true : false}
-                  producto={item}
-                />
+              !item.oculto || (item.oculto && usuario) ? (
+                item.tipoProducto === "Vela" ? (
+                  <CardShort
+                    key={item.id}
+                    imagen="./img/RosaCardNaranja.png"
+                    editar={usuario ? true : false}
+                    producto={item}
+                  />
+                ) : (
+                  ""
+                )
               ) : (
                 ""
               )
@@ -326,23 +341,24 @@ function Main() {
           {
             // ----------------------- RENDER DE OLEOS ----------------------------//
             listaProd.map((item) =>
-              item.tipoProducto === "Oleo" ? (
-                
-                !item.oculto || (item.oculto && usuario) ? 
-                (
-                <CardShort
-                  key={item.id}
-                  imagen="./img/RosaCardNude.png"
-                  editar={usuario ? true : false}
-                  producto={item}
-                />
+              !item.oculto || (item.oculto && usuario) ? (
+                item.tipoProducto === "Oleo" ? (
+                  !item.oculto || (item.oculto && usuario) ? (
+                    <CardShort
+                      key={item.id}
+                      imagen="./img/RosaCardNude.png"
+                      editar={usuario ? true : false}
+                      producto={item}
+                    />
+                  ) : (
+                    console.log(`oculto=${item.oculto}. usuario=${usuario}`)
+                  )
+                ) : (
+                  ""
                 )
-                :
-                console.log(`oculto=${item.oculto}. usuario=${usuario}`)
               ) : (
                 ""
               )
-              
             )
           }
         </div>
@@ -369,13 +385,17 @@ function Main() {
           {
             // ----------------------- RENDER DE ESPUMAS ----------------------------//
             listaProd.map((item) =>
-              item.tipoProducto === "Espuma" ? (
-                <CardShort
-                  key={item.id}
-                  imagen="./img/RosaCardAzul.png"
-                  editar={usuario ? true : false}
-                  producto={item}
-                />
+              !item.oculto || (item.oculto && usuario) ? (
+                item.tipoProducto === "Espuma" ? (
+                  <CardShort
+                    key={item.id}
+                    imagen="./img/RosaCardAzul.png"
+                    editar={usuario ? true : false}
+                    producto={item}
+                  />
+                ) : (
+                  ""
+                )
               ) : (
                 ""
               )
@@ -397,14 +417,19 @@ function Main() {
         <div className="container space_evenly">
           {
             // ----------------------- RENDER DE SALES ----------------------------//
+
             listaProd.map((item) =>
-              item.tipoProducto === "Sal de Baño" ? (
-                <CardShort
-                  key={item.id}
-                  imagen="./img/RosaCardAzul.png"
-                  editar={usuario ? true : false}
-                  producto={item}
-                />
+              !item.oculto || (item.oculto && usuario) ? (
+                item.tipoProducto === "Sal de Baño" ? (
+                  <CardShort
+                    key={item.id}
+                    imagen="./img/RosaCardAzul.png"
+                    editar={usuario ? true : false}
+                    producto={item}
+                  />
+                ) : (
+                  ""
+                )
               ) : (
                 ""
               )
@@ -425,13 +450,17 @@ function Main() {
           {
             // ----------------------- RENDER DE JABON LIQUIDO ----------------------------//
             listaProd.map((item) =>
-              item.tipoProducto === "Jabón Líquido" ? (
-                <CardShort
-                  key={item.id}
-                  imagen="./img/RosaCardAzul.png"
-                  editar={usuario ? true : false}
-                  producto={item}
-                />
+              !item.oculto || (item.oculto && usuario) ? (
+                item.tipoProducto === "Jabón Líquido" ? (
+                  <CardShort
+                    key={item.id}
+                    imagen="./img/RosaCardAzul.png"
+                    editar={usuario ? true : false}
+                    producto={item}
+                  />
+                ) : (
+                  ""
+                )
               ) : (
                 ""
               )

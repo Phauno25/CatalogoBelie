@@ -331,6 +331,10 @@ a:visited {
   width: auto;
   height: calc(100vh - 56px);
 }
+.header_banner_textos > h1 > a > span:hover {
+ background-color: var(--negro);
+ color: var(--blanco);
+}
 
 .header_banner video {
   width: 100%;
