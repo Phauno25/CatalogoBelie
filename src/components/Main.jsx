@@ -10,18 +10,8 @@ import { ContextData } from "../context/ContextData";
 import DetalleProducto from "./DetalleProducto";
 
 function Main() {
-  let {
-    editModal,
-    setEditModal,
-    detalleProducto,
-    setDetalleProducto,
-    producto,
-    setProducto,
-    categoria,
-    setCategoria,
-    actualizar,
-    setActualizar,
-  } = useContext(ContextData);
+  let { editModal, detalleProducto, producto, categoria, actualizar } =
+    useContext(ContextData);
   const [listaProd, setListaProd] = useState([]);
   const [listaCat, setListaCat] = useState([]);
   const [usuario, setUsuario] = useState(null);
@@ -111,7 +101,7 @@ function Main() {
       {editModal && categoria ? <EditCategoria categoria={categoria} /> : ""}
       <header>
         <nav>
-          <h1>Catalogo Belie 2022</h1>
+          <h1>Catalogo Belie 2024</h1>
           <ul className="links">
             <li>
               <a href="#Categorias" className="link">
@@ -289,10 +279,12 @@ function Main() {
           <div className="catalogo_textos">
             <h1>Velas de soja aromáticas.</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              animi assumenda, odio porro unde rem placeat cumque, quibusdam
-              sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
-              laborum quidem.
+              Las velas de soja aromáticas son una excelente opción para
+              aquellos que buscan un ambiente relajante y acogedor en su hogar.
+              En Belié, seleccionamos y diseñamos especialmente estos aromas
+              para que te permitan disfrutar de una experiencia única y
+              personalizada cada vez que las enciendas. llena tu hogar de luz y
+              aroma!
             </p>
           </div>
         </div>
@@ -328,12 +320,10 @@ function Main() {
         <div className="section_bar bg_nude h3rem"></div>
         <div className="container W100 space_center">
           <div className="catalogo_textos">
-            <h1>Oleos Corporales.</h1>
+            <h1>Colgantes de Auto.</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-              animi assumenda, odio porro unde rem placeat cumque, quibusdam
-              sint nobis debitis quis! Nam neque dolorem aliquid illum suscipit
-              laborum quidem.
+              Disfruta de tus fragancias mientras manejás, creando un ambiente
+              armonioso y personalizado en tu vehículo.
             </p>
           </div>
         </div>
