@@ -394,7 +394,7 @@ function Main() {
         </div>
         <div className="container W100 space_center">
           <div className="catalogo_textos">
-            <h1>Sales de Baño</h1>
+            <h1>Esencias para hornito</h1>
             <p>
               Los minerales y los oligoelementos presentes en la sal ayudan a tu
               piel a liberar las toxinas mejorando tu bienestar en general. Los
@@ -410,7 +410,7 @@ function Main() {
 
             listaProd.map((item) =>
               !item.oculto || (item.oculto && usuario) ? (
-                item.tipoProducto === "Sal de Baño" ? (
+                item.tipoProducto === "Esencia para hornito" ? (
                   <CardShort
                     key={item.id}
                     imagen="./img/RosaCardAzul.png"

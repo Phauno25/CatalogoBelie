@@ -125,9 +125,9 @@ function Migrador() {
       });
   };
 
-  const agregarOleos = () => {
+  const agregarHornitos = () => {
     let listaprodus = [];
-    fetch("/oleosMock.json")
+    fetch("/hornitos.json")
       .then((data) => data.json())
       .then((data) => {
         listaprodus = data;
@@ -163,7 +163,7 @@ function Migrador() {
           <button onClick={() => agregarDifusores()}>Migrar Difusores</button>
           <button onClick={() => agregarVelas()}>Migrar Velas</button>
           <button onClick={() => agregarEspumas()}>Migrar Bath</button>
-          <button onClick={() => agregarOleos()}>Migrar Oleos</button>
+          <button onClick={() => agregarHornitos()}>Migrar Hornitos</button>
         </div>
       }
     </div>
